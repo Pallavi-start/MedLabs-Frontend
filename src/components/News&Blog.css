@@ -1,0 +1,48 @@
+/* BackgroundSection.css */
+.bg-section {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLPXV8ZF2sbbAOlOtwtt7gobr7EIS-1VNqmw&s'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:200px;
+}
+
+.bg-section1 {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIofcsqJ--3C19uz-0Ii6162-e_pc3S696oA&s'); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   height:200px;
+}
+.bg-section2{
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRldH60R3mi9H8w6f2LRAt236ZR75-2vYf2iw&s'); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   height:200px;
+}
+.bg-section3{
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp8PdyxGrMBokM9RpwtV0CvZ3rLkgXlHEo_A&s'); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   height:200px;
+}
+.bg-image-section {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjNO6KhyVq7sWMCGzuyiYU_5-W81Z3KWbzKg&s'); /* Update path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+.bg-image-section6 {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjNO6KhyVq7sWMCGzuyiYU_5-W81Z3KWbzKg&s'); /* Update path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,44 @@
+.logo-strip {
+  display: flex;
+  width: max-content;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.strip-rtl {
+  animation-name: scroll-rtl;
+}
+
+.strip-ltr {
+  animation-name: scroll-ltr;
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+  background: transparent;
+  border-radius: 50;
+}
+.logo-row {
+  height: 100px; /* Adjust to your logo size */
+  overflow: hidden;
+  background-color: #f8f9fa; /* Light background stays visible */
+}
+@keyframes scroll-rtl {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+}
+
+@keyframes scroll-ltr {
+  0% {
+    transform: translateX(10%);
+  }
+50% {
+    transform: translateX(-10%);
+  }
+}
