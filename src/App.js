@@ -1,7 +1,7 @@
 import { Route ,Routes,BrowserRouter } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+
 import "./App.css"
-import axios from "axios";
+
 import Header from "./components/Header";
 import OptometryLenskart from "./components/OptometryLenskart";
 import Footer from "./components/Footer";

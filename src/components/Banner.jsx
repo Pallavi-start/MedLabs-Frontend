@@ -43,7 +43,7 @@ const Banner = () => {
         </Col>
          <Modal show={show} onHide={handleClose} centered>
                 <Modal.Header closeButton>
-                  <Modal.Title>Talk to a Counselor</Modal.Title>
+                  <Modal.Title>Talk to a Counselor </Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="text-center">
                   <p>We're just a call away to help you know more about MedLabs</p>

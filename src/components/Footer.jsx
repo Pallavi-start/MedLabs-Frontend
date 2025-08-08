@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Container, Row, Col, Button, Image, Card, Modal } from 'react-bootstrap';
 import { useState } from 'react';
 const Footer = () => {
@@ -36,10 +36,10 @@ const Footer = () => {
 
           <h1 className=" mb-3">Explore the MedLabs App</h1>
           <div className="d-flex justify-content-center gap-3 flex-wrap ">
-            <a href="https://play.google.com" target="_blank" rel="">
+            <a href="https://play.google.com" target="_blank" rel="noreferrer">
               <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV4qAyl3_O4SLbPQPAQU0FWSaR6UFullnshw&s" alt="Get it on Google Play" height={50} />
             </a>
-            <a href="https://www.apple.com/app-store/" target="_blank" rel="g">
+            <a href="https://www.apple.com/app-store/" target="_blank" rel="noreferrer">
               <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE6n8fLmlX1GlWkl8Okvf-mr9SW8Gf-dasBg&s" alt="Download on the App Store" height={50} />
             </a>
           </div>
@@ -76,14 +76,13 @@ const Footer = () => {
         </Col>
 
         <Col md={2}>
-          <h6>Follow Us</h6>
-          <ul className="list-unstyled">
-            <li><a href="#privacy" className="text-dark text-decoration-none" />Instagram</li>
-            <li><a href="#privacy" className="text-dark text-decoration-none" />Facebook</li>
-            <li><a href="#privacy" className="text-dark text-decoration-none" />LinkedIn</li>
-            <li><a href="#privacy" className="text-dark text-decoration-none" />YouTube</li>
-            <li><a href="#privacy" className="text-dark text-decoration-none" />X (formerly Twitter)</li>
-          </ul>
+         <ul className="list-unstyled">
+  <li><a href="#privacy" className="text-dark text-decoration-none" rel="noreferrer">Instagram</a></li>
+  <li><a href="#privacy" className="text-dark text-decoration-none" rel="noreferrer">Facebook</a></li>
+  <li><a href="#privacy" className="text-dark text-decoration-none" rel="noreferrer">LinkedIn</a></li>
+  <li><a href="#privacy" className="text-dark text-decoration-none" rel="noreferrer">YouTube</a></li>
+  <li><a href="#privacy" className="text-dark text-decoration-none" rel="noreferrer">X (formerly Twitter)</a></li>
+</ul>
         </Col>
 
         <Col md={2}>

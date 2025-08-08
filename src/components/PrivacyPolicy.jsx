@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Card, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import './PrivacyPolicy.css'
 const PrivacyPolicyParagraph = () => (
   <Container >
@@ -355,7 +355,7 @@ const PrivacyPolicyParagraph = () => (
       <p>For concerns or queries regarding this Privacy Policy, you may contact our Grievance Officer:</p>
       <p><strong>Name:</strong> <br />
         <strong>Designation:</strong> <br />
-        <strong>Email:</strong> <a href=""></a>
+        <strong>Email:</strong><a href="https://example.com" target="_blank" rel="noreferrer">Example</a>
       </p>
     </section>
 

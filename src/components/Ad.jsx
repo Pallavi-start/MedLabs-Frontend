@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Image } from 'react-bootstrap';
 import './Ad.css'; // External CSS for animation
 
 const logos = [
