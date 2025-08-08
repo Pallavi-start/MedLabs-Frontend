@@ -1,13 +1,8 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button, Image, Modal, Form, Accordion } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Image,  Accordion } from 'react-bootstrap';
 import { useState } from 'react';
 import { FaMapMarkerAlt, FaBookOpen, FaShieldAlt } from 'react-icons/fa';
-
-const MLTProgram = () => {
-  const handleOpenPDF = () => {
-    window.open('medlabs_brochure.pdf', '_blank');
-  }
-
+import ApplyNow from './ApplyNow';
 
   const logos = [
     'logo1.webp', 'logo2.png', 'logo3.png', 'logo3.png', 'logo1.webp', 'logo6.png', 'logo2.png', 'logo3.png', 'logo4.png', 'logo1.webp', 'logo2.png'
@@ -28,8 +23,7 @@ const MLTProgram = () => {
     'Familiarity with hospital protocols, patient care, ethics, communication, and soft skills.',
     'Hands-on experience in laboratory operations, quality control, and clinical diagnostics.',
   ];
-
-  const programs = [
+   const programs = [
     {
       name: 'B.Sc. (Hons.) MLT',
       duration: '4 years (Including 24 months internship)',
@@ -50,10 +44,7 @@ const MLTProgram = () => {
     },
   ];
 
-
-
-
-  const campuses = [
+const campuses = [
     {
       name: 'Apeejay Stya University',
       location: 'Gurugram, Haryana',
@@ -118,8 +109,7 @@ const MLTProgram = () => {
 
     },
   ];
-  const [showAll, setShowAll] = useState(false);
-  const displayedCampuses = showAll ? campuses : campuses.slice(0, 3);
+ 
 
   const faqs = [
     {
@@ -144,6 +134,17 @@ const MLTProgram = () => {
     },
   ];
 
+const MLTProgram = () => {
+  const handleOpenPDF = () => {
+    window.open('medlabs_brochure.pdf', '_blank');
+  }
+
+ const [showAll, setShowAll] = useState(false);
+  const displayedCampuses = showAll ? campuses : campuses.slice(0, 3);
+
+
+ const [showModal, setShowModal] = useState(false);
+ 
 
   return (
     <Container fluid className=" py-5 px-4 me-3 text-center align-items-center bg-light">
@@ -165,7 +166,8 @@ const MLTProgram = () => {
               <li><strong>✅ Starting Salary:</strong> ₹35,000/month </li>
             </ul>
 
-            <Button variant="secondary" className="mx-3">Apply Now</Button>
+               <ApplyNow show={showModal} handleClose={() => setShowModal(false)}/>  
+          <Button  onClick={() => setShowModal(true)} variant="secondary" className="mx-3" >Apply Now<span>&#8599;</span></Button>
             <Button variant="outline-secondary" onClick={handleOpenPDF}> 📘 Get Brochure </Button>
           </Card.Body>
           {/* </Card> */}

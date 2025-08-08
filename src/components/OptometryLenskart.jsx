@@ -1,13 +1,10 @@
-import { Container, Row, Col, Button, Image, Card, Form, ListGroup, Accordion } from 'react-bootstrap';
+import { Container, Row, Col, Button, Image, Card, Accordion } from 'react-bootstrap';
 import { FaMapMarkerAlt, FaBookOpen, FaShieldAlt } from 'react-icons/fa';
+import { useState } from 'react';
+import ApplyNow from './ApplyNow';
 
 
-const OptometryLenskart = () => {
-  const handleOpenPDF = () => {
-    window.open('medlabs_brochure.pdf', '_blank');
-  }  
-
-  const roles = [
+ const roles = [
     'Clinical Optometrist',
     'Retail Optometrist',
     'Store Manager',
@@ -37,6 +34,12 @@ const OptometryLenskart = () => {
 
   ];
 
+const OptometryLenskart = () => {
+  const handleOpenPDF = () => {
+    window.open('medlabs_brochure.pdf', '_blank');
+  }  
+
+   const [showModal, setShowModal] = useState(false);
 
 
   return (
@@ -54,7 +57,9 @@ const OptometryLenskart = () => {
             <li><strong>✅ Starting Salary:</strong> ₹30,000/month + Incentives</li>
           </ul>
           <div className="mt-4">
-            <Button variant="secondary" className="me-3 " href='/'>Apply Now</Button>
+         <ApplyNow show={showModal} handleClose={() => setShowModal(false)}/>  
+          <Button  onClick={() => setShowModal(true)} variant="secondary" className="mx-3" >Apply Now<span>&#8599;</span></Button>
+
             <Button variant="outline-dark" onClick={handleOpenPDF}> 📘Get Brochure</Button>
           </div>
         </Col>

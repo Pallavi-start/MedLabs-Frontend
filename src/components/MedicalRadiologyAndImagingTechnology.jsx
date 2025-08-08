@@ -1,7 +1,7 @@
 import { Row, Col, Image, Button, Container,  Card, Accordion } from 'react-bootstrap';
 import { useState } from 'react';
 import { FaMapMarkerAlt, FaBookOpen, FaShieldAlt } from 'react-icons/fa';
-
+import ApplyNow from './ApplyNow';
 
   const logos = [
     'logo1.webp', 'logo2.png', 'logo3.png', 'logo3.png', 'logo1.webp', 'logo6.png', 'logo2.png', 'logo3.png', 'logo4.png', 'logo1.webp', 'logo2.png'
@@ -99,6 +99,7 @@ import { FaMapMarkerAlt, FaBookOpen, FaShieldAlt } from 'react-icons/fa';
 
     },
   ];
+
 const MedicalRadiologyAndImagingTechnology = () => {
   const handleOpenPDF = () => {
     window.open('medlabs_brochure.pdf', '_blank');
@@ -107,6 +108,7 @@ const MedicalRadiologyAndImagingTechnology = () => {
   const [showAll, setShowAll] = useState(false);
   const displayedCampuses = showAll ? campuses : campuses.slice(0, 3);
 
+ const [showModal, setShowModal] = useState(false);
   return (
     <Container fluid className="bg-light " >
       <Row className="py-5  ">
@@ -121,7 +123,8 @@ const MedicalRadiologyAndImagingTechnology = () => {
             <li><strong>✅Starting Salary:</strong> Up to ₹35,000 per month<sup>*</sup></li>
           </ul>
           <div className="d-flex gap-3">
-            <Button variant="secondary">Apply Now</Button>
+          <ApplyNow show={showModal} handleClose={() => setShowModal(false)}/>  
+          <Button  onClick={() => setShowModal(true)} variant="secondary" className="mx-3" >Apply Now<span>&#8599;</span></Button>
             <Button variant="outline-secondary" onClick={handleOpenPDF}> 📘 Get Brochure </Button>
           </div>
         </Col>

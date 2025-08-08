@@ -4,42 +4,10 @@ import axios from 'axios';
 
 
 
-
-function PartnerWithUs() {
-    const handleOpenPDF = () => {
-    window.open('medlabs_brochure.pdf', '_blank'); // Opens PDF in a new tab
-  }
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    role: '',
-    affiliationType: '',
-    institute: '',
-    state: '',
-    district: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post('http://localhost:5000/api/enquiry', formData);
-      alert('Form submitted successfully');
-    } catch (error) {
-      console.error(error);
-      alert('Submission failed');
-    }
-  };
-
-
   const founders = [
     {
       src: '/',
-      name: 'Kunal Dudeja',
+      name: '',
       role: 'Co-Founder & CEO',
       note: "Business World's 40 under 40 Professional\nStrategic Design from NID",
     },
@@ -83,12 +51,47 @@ function PartnerWithUs() {
   ];
 
 
+
+function PartnerWithUs() {
+    const handleOpenPDF = () => {
+    window.open('medlabs_brochure.pdf', '_blank'); // Opens PDF in a new tab
+  }
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    role: '',
+    affiliationType: '',
+    institute: '',
+    state: '',
+    district: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post('ttps://medlabs-backend.onrender.com/api/enquiry', formData)
+       .then(res => console.log(res.data))
+       .catch(err => console.error(err));
+
+      alert('Form submitted successfully');
+    } catch (error) {
+      console.error(error);
+      alert('Submission failed');
+    }
+  };
+
+
   return (
     <Container fluid className=" bg-light">
       <Row className="align-items-center">
         {/* Left Panel – Promotional Section */}
         <Col md={6} className="">
-          <Card className="border-0 p-5 bg-light">
+          <Card className="border-0 p bg-light">
             <Card.Body>
               {/* Replace with actual image */}
               <Image src="https://media.istockphoto.com/id/608002780/photo/happy-student-at-the-school.jpg?s=612x612&w=0&k=20&c=AGt63KNWG2r8JVy1WZ4C2vcX0N9-DPj6C6bxhYMGz48=" alt="Partner with MedLabs" fluid className="mb-3" rounded />
@@ -108,14 +111,14 @@ function PartnerWithUs() {
 
         {/* Right Panel – Enquiry Form */}
         <Col md={6}>
-          <Card className="p-4 shadow-sm">
+          <Card className="p-5 shadow-sm">
             <Card.Title className="mb-3 fw-semibold">Enquire Now</Card.Title>
             <Form onSubmit={handleSubmit}>
-  <Row>
-    <Col sm={6}>
-      <Form.Group className="mb-3">
-        <Form.Label>Name</Form.Label>
-        <Form.Control 
+           <Row>
+           <Col sm={6}>
+             <Form.Group className="">
+         <Form.Label>Name</Form.Label>
+          <Form.Control 
           name="name"
           type="text"
           placeholder="Enter your name" 

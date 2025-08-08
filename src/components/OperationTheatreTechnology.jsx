@@ -1,17 +1,9 @@
-import { Row, Col, Image, Button, Container, Form, Modal, Card, Accordion } from 'react-bootstrap';
+import { Row, Col, Image, Button, Container, Card, Accordion } from 'react-bootstrap';
 import { useState } from 'react';
 import { FaMapMarkerAlt, FaBookOpen, FaShieldAlt } from 'react-icons/fa';
+import ApplyNow from './ApplyNow';
 
-
-
-
-
-function OTT() {
-   const handleOpenPDF = () => {
-    window.open('medlabs_brochure.pdf', '_blank');
-   }
-
-  const ottRoles = [
+const ottRoles = [
     "Surgical Assistant",
     "Sterilization Specialist",
     "Dental Technician",
@@ -113,6 +105,15 @@ function OTT() {
 
     },
   ];
+
+
+function OTT() {
+   const handleOpenPDF = () => {
+    window.open('medlabs_brochure.pdf', '_blank');
+   }
+
+ const [showModal, setShowModal] = useState(false);
+  
   const [showAll, setShowAll] = useState(false);
   const displayedCampuses = showAll ? campuses : campuses.slice(0, 3);
   return (
@@ -131,7 +132,8 @@ function OTT() {
             <li><strong>✅ Starting Salary:</strong> ₹35,000/month</li>
           </ul>
           <div className="mt-4">
-            <Button variant="secondary" className="me-3">Apply Now</Button>
+              <ApplyNow show={showModal} handleClose={() => setShowModal(false)}/>  
+          <Button  onClick={() => setShowModal(true)} variant="secondary" className="mx-3" >Apply Now<span>&#8599;</span></Button>
             <Button variant="outline-secondary" onClick={handleOpenPDF}> 📘 Get Brochure </Button>
           </div>
         </Col>

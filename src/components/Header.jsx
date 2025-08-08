@@ -17,6 +17,7 @@ const Header = () => {
             height="100"
             className="d-inline-block align-top me-2"
             alt="logo"
+            padding='0px'
          
           />
         

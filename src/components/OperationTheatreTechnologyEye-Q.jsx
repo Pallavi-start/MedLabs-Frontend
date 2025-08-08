@@ -1,16 +1,9 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button, Image, Modal, Form, Accordion } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Image,  Accordion } from 'react-bootstrap';
 import { useState } from 'react';
 import { FaMapMarkerAlt, FaBookOpen, FaShieldAlt } from 'react-icons/fa';
-
-
-
-
-const OperationTheatreTechnologyEye = () => {
-   const handleOpenPDF = () => {
-    window.open('medlabs_brochure.pdf', '_blank');
-   }
-  const OOTRoles = [
+import ApplyNow from './ApplyNow';
+ const OOTRoles = [
     'OT Technician',
     'Surgical Coordinator',
     'Assittant to Opthalmic Surgeon',
@@ -70,6 +63,12 @@ const OperationTheatreTechnologyEye = () => {
   ];
 
 
+
+const OperationTheatreTechnologyEye = () => {
+   const handleOpenPDF = () => {
+    window.open('medlabs_brochure.pdf', '_blank');
+   }
+   const [showModal, setShowModal] = useState(false);
   return (
     <Container fluid className=" py-5 px-4 me-3 text-center align-items-center bg-light">
 
@@ -87,7 +86,8 @@ const OperationTheatreTechnologyEye = () => {
             <li><strong>✅Starting Salary:</strong> ₹18,000 per month</li>
           </ul>
           <div className="d-flex gap-3">
-            <Button variant="secondary">Apply Now</Button>
+           <ApplyNow show={showModal} handleClose={() => setShowModal(false)}/>  
+          <Button  onClick={() => setShowModal(true)} variant="secondary" className="mx-3" >Apply Now<span>&#8599;</span></Button>
             <Button variant="outline-secondary" onClick={handleOpenPDF}> 📘 Get Brochure </Button>
           </div>
         </Col>

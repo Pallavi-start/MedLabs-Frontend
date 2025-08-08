@@ -1,14 +1,10 @@
 
-import { Card, Button, Container, Col, Row, Image, Form, Modal, Accordion } from 'react-bootstrap';
+import { Card, Button, Container, Col, Row, Image,  Accordion } from 'react-bootstrap';
+import ApplyNow from './ApplyNow';
 import { useState } from 'react';
-
 function HospitalAdministration() {
+  const [showModal, setShowModal] = useState(false);
 
-
- 
-  const handleOpenPDF = () => {
-    window.open('medlabs_brochure.pdf', '_blank');
-  }
   const logos = [
     'logo1.webp', 'logo2.png', 'logo3.png', 'logo3.png', 'logo1.webp', 'logo6.png', 'logo2.png', 'logo3.png', 'logo4.png', 'logo1.webp', 'logo2.png'
   ];
@@ -52,6 +48,10 @@ function HospitalAdministration() {
     }
   ];
 
+  const handleOpenPDF = () => {
+    window.open('medlabs_brochure.pdf', '_blank');
+  }
+ 
 
   return (
     <Container fluid className=" py-5 px-4 me-3 text-center align-items-center bg-light">
@@ -67,9 +67,9 @@ function HospitalAdministration() {
               <li><strong>✅Eligibility:</strong> 10+2 (any stream, pass)</li>
               <li><strong>✅Starting Salary:</strong> Up to ₹35,000/month</li>
             </ul>
-            <Button variant="secondary" aria-label="Apply for Hospital Administration Program" className='mx-2'>
-              Apply Now
-            </Button>
+           <ApplyNow show={showModal} handleClose={() => setShowModal(false)}/>  
+          <Button  onClick={() => setShowModal(true)} variant="secondary" className="mx-3" >Apply Now <span>&#8599;</span></Button>
+
             <Button variant="outline-secondary" onClick={handleOpenPDF}> 📘 Get Brochure </Button>
           </Card.Body>
         </Col>
@@ -80,40 +80,7 @@ function HospitalAdministration() {
         </Col>
       </Row>
 
-{/* 
-      <Modal show={show} onHide={handleClose} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>Explore our HA Program</Modal.Title>
-        </Modal.Header>
 
-        <Modal.Body>
-          <p className="mb-3">
-            📘 Download the brochure to get details on <strong>curriculum, scope, fees, and more</strong>.
-          </p>
-
-          <Form>
-            <Form.Group controlId="formName" className="mb-3">
-              <Form.Label>Full Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter your full name" />
-            </Form.Group>
-
-            <Form.Group controlId="formPhone" className="mb-3">
-              <Form.Label>Phone Number</Form.Label>
-              <Form.Control type="tel" placeholder="Enter your phone number" />
-              <Button variant="outline-secondary" className="mt-2">Verify</Button>
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-
-        <Modal.Footer className="d-flex flex-column">
-          <Button variant="success" onClick={handleClose}>
-            Verify Your Mobile Number
-          </Button>
-          <small className="mt-2 text-muted text-center">
-            By continuing, I agree to the <a href="#">T&Cs</a> and <a href="#">Privacy Policy</a>.
-          </small>
-        </Modal.Footer>
-      </Modal> */}
       <Row className='my-5'>
 
         {/* First Row: Right to Left  */}
