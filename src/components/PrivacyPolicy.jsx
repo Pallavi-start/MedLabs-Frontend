@@ -369,4 +369,4 @@ const PrivacyPolicyParagraph = () => (
 
 
 
-export default PrivacyPolicyParagraph;;
+export default PrivacyPolicyParagraph;

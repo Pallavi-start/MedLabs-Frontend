@@ -74,7 +74,7 @@ function PartnerWithUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://medlabs-backend.onrender.com/api/enquiry', formData)
+      await axios.post('https://backend-medlabs.onrender.com/api/enquiry', formData)
        .then(res => console.log(res.data))
        .catch(err => console.error(err));
 

@@ -87,9 +87,9 @@ const Footer = () => {
 
         <Col md={2}>
           <h6>Contact</h6>
-          <p className="small mb-1"><strong>Registered Office:</strong><br />20/6, Nuchem Compound, Mathura Road, Faridabad - 121006, Haryana</p>
-          <p className="small mb-1"><strong>Corporate Office:</strong><br />WeWork, Vi-John Tower, 393, Udyog Vihar Phase 3 Rd, Gurugram, Haryana - 122016</p>
-          <p className="small mb-1"><strong>Phone:</strong> +91 78 2727 6767</p>
+         
+          <p className="small mb-1"><strong>Corporate Office:</strong><br />City Avenue Commercial M Building, 313, near Sayali Hotel,Shankar Kalat Nagar,Wakad,Maharashtra 411051</p>
+          <p className="small mb-1"><strong>Phone:</strong> +91 9021643748 </p>
           <p className="small"><strong>Email:</strong> info@MedLabs.org</p>
         </Col>
 
@@ -114,7 +114,7 @@ const Footer = () => {
           <p>We're just a call away to help you know more about MedLabs</p>
           <p className="fw-bold mt-3">Call us directly</p>
           <Button variant="dark" className="mb-2" aria-label="Call MedLabs">
-            <i className="bi bi-telephone-fill me-2"></i>+91 000000000
+            <i className="bi bi-telephone-fill me-2"></i>+91
           </Button>
           <p>(Available between 9 AM - 6 PM)</p>
           <hr />

@@ -231,7 +231,7 @@ const ProgramsCarousel = () => {
                         
                       </Card.Body>
                       <Card.Footer>{program.href && (
-                          <Button variant="secondary w-100" href={program.href}>Explore</Button>
+                          <Button variant="secondary w-100" as={Link} to={program.href}>Explore</Button>
                         )}</Card.Footer>
                     </Card>
                   </Col>
