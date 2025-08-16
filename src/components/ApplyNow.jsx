@@ -22,7 +22,8 @@ function ApplyNow({ show, handleClose }) {
     e.preventDefault();
     setError('');
     try {
-      await axios.post('https://backend-medlabs.onrender.com/api/submit', formData)
+     await axios.post('https://backend-medlabs.onrender.com/api/submit', formData)
+     
        .then(res => console.log(res.data))
        .catch(err => console.error(err));
 
