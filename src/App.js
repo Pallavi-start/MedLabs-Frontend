@@ -3,7 +3,7 @@ import { Route ,Routes,BrowserRouter } from "react-router-dom";
 import "./App.css"
 
 import Header from "./components/Header";
-import OptometryLenskart from "./components/OptometryLenskart";
+// import OptometryLenskart from "./components/OptometryLenskart";
 import PharmaBusinessAnalytics from "./components/PharmaBusinessAnalytics";
 import Footer from "./components/Footer";
 import AllPrograms from "./components/AllPrograms";
@@ -13,11 +13,11 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsCondition from "./components/TermsCondition";
 import StudentPolicy from "./components/StudentPolicy";
 import RefundPolicy from "./components/RefundPolicy";
-import PartnerWithUs from "./components/PartnerWithUs";
+// import PartnerWithUs from "./components/PartnerWithUs";
 import HospitalAdministration from "./components/HospitalAdministration";
-import OTT from "./components/OperationTheatreTechnology";
+// import OTT from "./components/OperationTheatreTechnology";
 import MedicalRadiologyAndImagingTechnology from "./components/MedicalRadiologyAndImagingTechnology";
-import OperationTheatreTechnologyEye from "./components/OperationTheatreTechnologyEye-Q";
+// import OperationTheatreTechnologyEye from "./components/OperationTheatreTechnologyEye-Q";
 import Campuses from "./components/Campuses";
 import NewsBlog from "./components/News&Blog";
 import CompetitiveIntelligence from "./components/ForecasstifyCompetitiveIntelligenceProgram";

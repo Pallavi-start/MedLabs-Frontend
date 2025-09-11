@@ -23,29 +23,29 @@ const outcomes = [
 ];
 
 
-const campuses = [
-  {
-    name: 'Apeejay Stya University',
-    location: 'Gurugram, Haryana',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZkObc2RFbosrBgArPF0WaUXMsumj7YKb2vQ&s',
-    programs: 'Pharma Business Analytics, MRIT, MLT',
-    accreditation: "NAAC 'A' Graded",
-  },
-  {
-    name: 'Ashoka Institute of Technology & Management',
-    location: 'Varanasi, Uttar Pradesh',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMXZPFqiQsGAb3eWPW81QL2HqM3hS9nPgAoA&s',
-    programs: 'Pharma Analytics, MLT',
-    accreditation: 'UGC Recognised',
-  },
-  {
-    name: 'Awadh Public Charitable Trust (APCT)',
-    location: 'Delhi',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHvRRLFZEkwvlsT7b-bIjAvde3r_3x22guwA&s',
-    programs: 'Pharma Analytics, OTT',
-    accreditation: "NAAC 'A' Graded",
-  }
-];
+// const campuses = [
+//   {
+//     name: 'Apeejay Stya University',
+//     location: 'Gurugram, Haryana',
+//     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZkObc2RFbosrBgArPF0WaUXMsumj7YKb2vQ&s',
+//     programs: 'Pharma Business Analytics, MRIT, MLT',
+//     accreditation: "NAAC 'A' Graded",
+//   },
+//   {
+//     name: 'Ashoka Institute of Technology & Management',
+//     location: 'Varanasi, Uttar Pradesh',
+//     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMXZPFqiQsGAb3eWPW81QL2HqM3hS9nPgAoA&s',
+//     programs: 'Pharma Analytics, MLT',
+//     accreditation: 'UGC Recognised',
+//   },
+//   {
+//     name: 'Awadh Public Charitable Trust (APCT)',
+//     location: 'Delhi',
+//     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHvRRLFZEkwvlsT7b-bIjAvde3r_3x22guwA&s',
+//     programs: 'Pharma Analytics, OTT',
+//     accreditation: "NAAC 'A' Graded",
+//   }
+// ];
 
 const PharmaBusinessAnalytics = () => {
 
@@ -56,8 +56,8 @@ const handleOpenPDF = () => {
   link.click();
 };
 
-  const [showAll, setShowAll] = useState(false);
-  const displayedCampuses = showAll ? campuses : campuses.slice(0, 3);
+  // const [showAll, setShowAll] = useState(false);
+  // const displayedCampuses = showAll ? campuses : campuses.slice(0, 3);
 
   const [showModal, setShowModal] = useState(false);
 
