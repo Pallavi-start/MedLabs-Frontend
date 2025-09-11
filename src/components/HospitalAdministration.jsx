@@ -156,7 +156,7 @@ function HospitalAdministration() {
         </Col>
       </Row>
       <Row className='justify-content-center p-5'>
-        <h1 className=" mb-4">Partner Campuses Offering HT</h1>
+        <h1 className=" mb-4">Partner Campuses Offering HA</h1>
         <Col md={4} >
 
           <Card className="mb-4 shadow-sm p-2 ">

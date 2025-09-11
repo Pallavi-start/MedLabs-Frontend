@@ -114,7 +114,7 @@ const Footer = () => {
           <p>We're just a call away to help you know more about MedLabs</p>
           <p className="fw-bold mt-3">Call us directly</p>
           <Button variant="dark" className="mb-2" aria-label="Call MedLabs">
-            <i className="bi bi-telephone-fill me-2"></i>+91
+            <i className="bi bi-telephone-fill me-2"></i>+91 9021643748
           </Button>
           <p>(Available between 9 AM - 6 PM)</p>
           <hr />

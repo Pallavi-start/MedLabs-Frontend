@@ -1,8 +1,57 @@
 import React from 'react';
 import { Carousel, Card, Button, Row, Col, Container, Modal, } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
 import { useState, } from 'react';
+
+
+const AIprogramData = [
+ 
+    {
+    title: 'AI Healthcare Training Program',
+     description:' Learn how Artificial Intelligence is revolutionizing diagnostics, drug development, and patient care.',
+     eligibility: 'Btech/Mtech/MCA/BPharma/Mpharma',
+     duration: '2 Month ',
+     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7-Pl2CSGoRUJ0atuXpl-PFJdl_VRYq7aw2w&s',
+     href: "/AIInHealthcareTrainingProgram"
+    },  
+  
+   {
+    title: 'Competitive Intelligence Training Program',
+    description: 'Gain expertise in pharma and healthcare competitive intelligence to support strategic business decisions',
+    duration: '2 Months ',
+    eligibility: 'Btech/Mtech/MCA/BPharma/Mpharma',
+    img: 'https://img.freepik.com/free-photo/businessman-analyzing-data-charts-laptop_53876-25079.jpg',
+    href: "/ForecassitifyCompetitiveIntelligenceProgram"
+  }, 
+  
+   {
+    title: 'HEOR Program',
+    description: ' Shape healthcare decision-making and market access with advanced skills in HEOR and Real-World Evidence.',
+    duration: '2 Months ',
+    eligibility: 'Btech/Mtech/MCA/BPharma/Mpharma',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScwXUQMdkguUVOOaJ7jUHD_-pdCN7885Q9Dw&s',
+    href: "/HEORProgram"
+  }, 
+   {
+    title: 'Pharma Business Analytics',
+    description: ' Transform pharma and healthcare decision-making with the power of analytics and real-world evidence.',
+    duration: '2 Months ',
+    eligibility: 'Btech/Mtech/MCA/BPharma/Mpharma',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIMz65CSexkCaytmKVuqauG8GSuPy6o6E-_w&s',
+    href: "/PharmaBusinessAnalytics"
+  }, 
+  {
+    title:'Pharma Forecasting Training Program',
+  description : 'Pharma  Gain expertise in pharmaceutical forecasting, demand planning, and data-driven decision-making.',
+    duration: '2 Months ',
+    eligibility: 'Btech/Mtech/MCA/BPharma/Mpharma',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx3sq95XSTNUVEh4N9KQj8cGwqhnVmvtU3ng&s',
+    href: "/PharmaForecastingTrainingProgram"
+  }, 
+];
+
+
+
 const programData = [
   {
     title: 'Bachelor of Optometry (Optom)',
@@ -189,7 +238,7 @@ const chunkArray = (arr, size) =>
 const ProgramsCarousel = () => {
   const chunks = chunkArray(programData, 3);
   const chunks2 = chunkArray(blogPosts, 3);
-
+  const chunks3 = chunkArray(AIprogramData,3);
 
   const [index, setIndex] = useState(0);
 
@@ -203,11 +252,89 @@ const ProgramsCarousel = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <Container fluid className='text-center'>
+    <Container fluid className='text-center '>
       <Row className='text-center py-5 '>
         <h2><strong>Pursue India's Most In-Demand</strong></h2>
-        <h1><strong>Allied Health Programs</strong></h1>
+        <h1><strong>Artificial Intelligence Courses in Healtcare</strong></h1>
 
+        <Carousel activeIndex={index} onSelect={handleSelect}>
+          {chunks3.map((group, index) => (
+            <Carousel.Item key={index}>
+              <Row className="justify-content-center m-4">
+                {group.map((program, idx) => (
+                  <Col key={idx} md={4} className="mb-3 p-2">
+                    <Card className="h-100 shadow p-2">
+                      {program.img && (
+                        <Card.Img variant="top" src={program.img}
+                          height='200px' />
+                      )}
+                      <Card.Body>
+                        <Card.Title>{program.title}</Card.Title>
+                        <Card.Text className='text-start'>
+                          {program.description}<br />
+
+                       
+                          <strong>⏳Duration:</strong> {program.duration}<br />
+                          <strong>✅ Eligibility:</strong> {program.eligibility}
+                        </Card.Text>
+                        
+                      </Card.Body>
+                      <Card.Footer>{program.href && (
+                          <Button variant="secondary w-100" as={Link} to={program.href}>Explore</Button>
+                        )}</Card.Footer>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+        <div>
+          <Button variant='outline-secondary' className=' px-3' as={Link} to="/AllPrograms" onClick={() => window.scrollTo(0, 0)}>Explore all program</Button>
+        </div>
+      </Row>
+
+      <Row className=" d-flex justify-content-center align-items-center text-center bg-danger p-5 text-white   ">
+        <Col className='p-5'>
+          <h1><strong>Want to see if you qualify for these programs?</strong></h1>
+          <h6>
+            Talk to our counselor to check your eligibility and know more about our programs.
+          </h6>
+          <Button variant='outline-secondary' className=' bg-white m-3  text-dark'  onClick={handleShow} aria-label="Talk to a counselor">
+            Ckeck your eligibility
+          </Button>
+        </Col>
+      </Row>
+
+
+      <Modal show={show} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Talk to a Counselor</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="text-center">
+          <p>We're just a call away to help you know more about MedLabs</p>
+          <p className="fw-bold mt-3">Call us directly</p>
+          <Button variant="dark" className="mb-2" aria-label="Call MedLabs">
+            <i className="bi bi-telephone-fill me-2"></i>+91 9021643748
+          </Button>
+          <p>(Available between 9 AM - 6 PM)</p>
+          <hr />
+          <p>OR</p>
+          <Button variant="success" aria-label="Talk via WhatsApp">
+            <i className="bi bi-whatsapp me-2"></i>Talk to us on WhatsApp
+          </Button>
+        </Modal.Body>
+      </Modal>
+
+      <Row style={{ backgroundColor: '#07012fff' }}>
+        <Col className="text-center text-white mb-4 my-5">
+          <h2><strong>Pursue India's Most In-Demand</strong></h2>
+        <h1><strong>Allied Health Programs 
+          </strong></h1>
+        </Col>
+
+
+      
         <Carousel activeIndex={index} onSelect={handleSelect}>
           {chunks.map((group, index) => (
             <Carousel.Item key={index}>
@@ -240,85 +367,9 @@ const ProgramsCarousel = () => {
             </Carousel.Item>
           ))}
         </Carousel>
-        <div>
-          <Button variant='outline-secondary' className=' px-3' as={Link} to="/AllPrograms">Explore all program</Button>
-        </div>
-      </Row>
-
-      <Row className=" d-flex justify-content-center align-items-center text-center bg-danger p-5 text-white   ">
-        <Col className='p-5'>
-          <h1><strong>Want to see if you qualify for these programs?</strong></h1>
-          <h6>
-            Talk to our counselor to check your eligibility and know more about our programs.
-          </h6>
-          <Button variant='outline-secondary' className=' bg-white m-3  text-dark'  onClick={handleShow} aria-label="Talk to a counselor">
-            Ckeck your eligibility
-          </Button>
-        </Col>
-      </Row>
-
-
-      <Modal show={show} onHide={handleClose} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>Talk to a Counselor</Modal.Title>
-        </Modal.Header>
-        <Modal.Body className="text-center">
-          <p>We're just a call away to help you know more about MedLabs</p>
-          <p className="fw-bold mt-3">Call us directly</p>
-          <Button variant="dark" className="mb-2" aria-label="Call MedLabs">
-            <i className="bi bi-telephone-fill me-2"></i>+91 000000000
-          </Button>
-          <p>(Available between 9 AM - 6 PM)</p>
-          <hr />
-          <p>OR</p>
-          <Button variant="success" aria-label="Talk via WhatsApp">
-            <i className="bi bi-whatsapp me-2"></i>Talk to us on WhatsApp
-          </Button>
-        </Modal.Body>
-      </Modal>
-
-      <Row style={{ backgroundColor: '#07012fff' }}>
-        <Col className="text-center text-white mb-4 my-5">
-          <h1> Choose from</h1>
-          <h1><strong> 20+ Partner Campuses in 15+ Cities</strong>
-
-          </h1><br />
-          <h5>study at india's top universities & colleges,combinig the best campus exprerince & indistry-leading heathcare eduction</h5>
-        </Col>
-
-
-        <Carousel activeIndex={index} onSelect={handleSelect}>
-          {chunks.map((group, index) => (
-            <Carousel.Item key={index}>
-              <Row className="justify-content-center m-4">
-                {group.map((program, idx) => (
-                  <Col key={idx} md={4} className="mb-3 p-2">
-                    <Card className="h-100 shadow p-2">
-                      {program.img && (
-                        <Card.Img variant="top" src={program.img}
-                          height='150px' />
-                      )}
-                      <Card.Body>
-                        <Card.Title>{program.title}</Card.Title>
-                        <Card.Text className='text-start'>
-                          <br />
-
-                          <strong>📘Degree:</strong> {program.degree}<br />
-                          <strong>⏳Duration:</strong> {program.duration}<br />
-                          <strong>✅ Eligibility:</strong> {program.eligibility}
-                        </Card.Text><hr />
-
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            </Carousel.Item>
-          ))}
-        </Carousel>
 
         <div>
-          <Button variant='outline-secondary' className='bg-white text-dark m-3' as={Link} to="/Campuses">Find a Campus near you</Button>
+          <Button variant='outline-secondary' className='bg-white text-dark m-3' as={Link} to="/AllPrograms" onClick={() => window.scrollTo(0, 0)}>Explore all program</Button>
         </div>
 
       </Row>

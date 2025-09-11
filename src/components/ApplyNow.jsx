@@ -8,7 +8,7 @@ function ApplyNow({ show, handleClose }) {
     name: '',
     email: '',
     phone: '',
-    campus: ''
+    // campus: ''
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -80,7 +80,7 @@ function ApplyNow({ show, handleClose }) {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3">
+           {/* <Form.Group className="mb-3">
             <Form.Select name="campus" value={formData.campus} onChange={handleChange} required>
               <option value="">Select a Campus</option>
                <option>SSIM - Dwarka, Delhi</option>
@@ -103,8 +103,8 @@ function ApplyNow({ show, handleClose }) {
                <option>Vikrant University - Gwalior</option>
               <option>MIT University - Shillong</option>
              <option>COER University - Roorkee</option>
-            </Form.Select>
-          </Form.Group>
+            </Form.Select> 
+          </Form.Group> */}
 
           <Button variant="primary w-100" type="submit">
             Submit

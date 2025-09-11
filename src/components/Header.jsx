@@ -31,22 +31,28 @@ const Header = () => {
             <Nav.Link href="/">Home</Nav.Link>
             <NavDropdown title="Programs" id="nav-programs">
               <NavDropdown.Item as={Link} to="/AllPrograms">All Program</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/OptometryLenskart">Optometry-Lenskart</NavDropdown.Item>
+              <hr />
+              <NavDropdown.Item as={Link}to="/AIInHealthcareTrainingProgram">AI HealthCare Program</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/ForecassitifyCompetitiveIntelligenceProgram" >Competitive Intellingence Training Program </NavDropdown.Item>
+             <NavDropdown.Item as={Link} to="/HEORProgram">HEOR Program</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/PharmaBusinessAnalytics">Pharma Business Analytics</NavDropdown.Item>
+             <NavDropdown.Item as={Link} to="/PharmaForecastingTrainingProgram">Pharma Forecasting Training Program </NavDropdown.Item>
+             <hr />
               <NavDropdown.Item as={Link} to="/MedicalLaboratoryTechnology">Medical Laboratory Technology(MLT)</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/HospitalAdminitration">Hospital Administration(HA)</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/OperationTheatreTechnology">Operation Theatre Teachnology(OTT)</NavDropdown.Item>
+              {/* <NavDropdown.Item as={Link} to="/OperationTheatreTechnology">Operation Theatre Teachnology(OTT)</NavDropdown.Item> */}
               <NavDropdown.Item as={Link} to="/MedicalRadiologyAndImagingTechnology">Medical Radilogy and Imaging Technology(MRIT)</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/OperationTheatreTechnologyEye-Q">Operation Theatre Technology-Eye-Q</NavDropdown.Item>
+              {/* <NavDropdown.Item as={Link} to="/OperationTheatreTechnologyEye-Q">Operation Theatre Technology-Eye-Q</NavDropdown.Item> */}
 
             </NavDropdown>
-            <Nav.Link as={Link} to="/Campuses">Campuses</Nav.Link>
+            {/* <Nav.Link as={Link} to="/Campuses">Campuses</Nav.Link> */}
             <Nav.Link as={Link} to="/News&Blog">News&Blogs</Nav.Link>
             <NavDropdown title="More" id="nav-more">
               <NavDropdown.Item as={Link} to="/PrivacyPolicy">Privacy Policy</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/TermsCondition">Terms & Conditions</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/StudentPolicy">student Policy</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/RefundPolicy">Refund Policy</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/PartnerWithUs">Partner With Us</NavDropdown.Item>
+              {/* <NavDropdown.Item as={Link} to="/PartnerWithUs">Partner With Us</NavDropdown.Item> */}
             </NavDropdown>
           </Nav>
 
