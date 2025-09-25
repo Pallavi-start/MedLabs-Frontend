@@ -10,18 +10,20 @@ const Header = () => {
   return (
     <Navbar  expand="lg"className='Navbar my-0  pt-0 bg-light '>
       <Container className=''>
-        <Navbar.Brand href="#home">
-          <img
-            src="/MedLabs.png"
-            width="120"
-            height="100"
-            className="d-inline-block align-top me-2"
-            alt="logo"
-            padding='0px'
-         
-          />
-        
-        </Navbar.Brand>
+<Navbar.Brand href="#home" className="d-flex align-items-center">
+  <img
+    src="/logo.png"
+    width="100"
+    height="100"
+    className="d-inline-block align-top m-0 p-0"  // smaller gap
+    alt="logo"
+  />
+  <div className=''>
+    <span className="fw-bold text-primary fs-4 ">MedLabs</span><br />
+    <span className=" text2 text-danger fst-italic">Institute of Healthcare Eduction</span>
+  </div>
+</Navbar.Brand>
+
 
         <Navbar.Toggle aria-controls="navbar-nav" />
 
@@ -29,14 +31,18 @@ const Header = () => {
           {/* Centered Navigation */}
           <Nav className="mx-auto text-center fw-bold">
             <Nav.Link href="/">Home</Nav.Link>
-            <NavDropdown title="Programs" id="nav-programs">
-              <NavDropdown.Item as={Link} to="/AllPrograms">All Program</NavDropdown.Item>
+            <NavDropdown title="Courses" id="nav-programs">
+              <NavDropdown.Item as={Link} to="/AllPrograms">All Courses</NavDropdown.Item>
               <hr />
-              <NavDropdown.Item as={Link}to="/AIInHealthcareTrainingProgram">AI HealthCare Program</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/ForecassitifyCompetitiveIntelligenceProgram" >Competitive Intellingence Training Program </NavDropdown.Item>
-             <NavDropdown.Item as={Link} to="/HEORProgram">HEOR Program</NavDropdown.Item>
+              <NavDropdown.Item as={Link}to="/AIInHealthcareTrainingProgram">AI In HealthCare </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/PharmaBusinessAnalytics">Pharma Business Analytics</NavDropdown.Item>
-             <NavDropdown.Item as={Link} to="/PharmaForecastingTrainingProgram">Pharma Forecasting Training Program </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/PharmaForecastingTrainingProgram">Pharma Forecasting  </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/HEORProgram">HEOR & Market Access</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/ForecassitifyCompetitiveIntelligenceProgram" >Competitive Intellingence  </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/CommericialAnalytics">Commericial Analytics</NavDropdown.Item>
+            
+              
+            
              <hr />
               <NavDropdown.Item as={Link} to="/MedicalLaboratoryTechnology">Medical Laboratory Technology(MLT)</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/HospitalAdminitration">Hospital Administration(HA)</NavDropdown.Item>

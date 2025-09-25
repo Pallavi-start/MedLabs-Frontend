@@ -109,7 +109,7 @@ const ottRoles = [
 
 function OTT() {
    const handleOpenPDF = () => {
-    window.open('medlabs_brochure.pdf', '_blank');
+    window.open('MedLabs_brochure.pdf', '_blank');
    }
 
  const [showModal, setShowModal] = useState(false);

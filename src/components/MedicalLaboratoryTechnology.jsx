@@ -1,12 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button, Image,  Accordion } from 'react-bootstrap';
 import { useState } from 'react';
-import { FaMapMarkerAlt, FaBookOpen, FaShieldAlt } from 'react-icons/fa';
+// import { FaMapMarkerAlt, FaBookOpen, FaShieldAlt } from 'react-icons/fa';
 import ApplyNow from './ApplyNow';
 
-  const logos = [
-    'logo1.webp', 'logo2.png', 'logo3.png', 'logo3.png', 'logo1.webp', 'logo6.png', 'logo2.png', 'logo3.png', 'logo4.png', 'logo1.webp', 'logo2.png'
-  ];
 
   const roles = [
     'Diagnostic Lab Technician',
@@ -27,88 +24,88 @@ import ApplyNow from './ApplyNow';
     {
       name: 'B.Sc. (Hons.) MLT',
       duration: '4 years (Including 24 months internship)',
-      fee: '₹6,40,000/-',
+      fee: '₹4,00,000/-',
       payModes: '(Pay per Month Semester or Yearly)'
     },
     {
       name: 'B.Sc. MLT',
       duration: '3 years (Including 18 months internship)',
-      fee: '₹5,40,000/-',
+      fee: '₹3,00,000/-',
       payModes: '(Pay per Month Semester or Yearly)'
     },
     {
       name: 'B.Voc. MLT',
       duration: '3 years (Including 18 months internship)',
-      fee: '₹3,90,000/-',
+      fee: '₹3,00,000/-',
       payModes: '(Pay per Month Semester or Yearly)'
     },
   ];
 
-const campuses = [
-    {
-      name: 'Apeejay Stya University',
-      location: 'Gurugram, Haryana',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZkObc2RFbosrBgArPF0WaUXMsumj7YKb2vQ&s',
-      programs: 'MLT, OTT, MRIT',
-      accreditation: "NAAC 'A' Graded",
-    },
-    {
-      name: 'Ashoka Institute of Technology & Management',
-      location: 'Varanasi, Uttar Pradesh',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMXZPFqiQsGAb3eWPW81QL2HqM3hS9nPgAoA&s',
-      programs: 'MLT, OTT',
-      accreditation: 'UGC Recognised',
-    },
-    {
-      name: 'Awadh Public Charitable Trust (APCT)',
-      location: 'Delhi',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHvRRLFZEkwvlsT7b-bIjAvde3r_3x22guwA&s',
-      programs: 'MLT, OTT',
-      accreditation: "NAAC 'A' Graded",
-    },
-    {
-      name: 'Apeejay Stya University',
-      location: 'Gurugram, Haryana',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZkObc2RFbosrBgArPF0WaUXMsumj7YKb2vQ&s',
-      programs: 'MLT, OTT, MRIT',
-      accreditation: "NAAC 'A' Graded",
-    },
-    {
-      name: 'Ashoka Institute of Technology & Management',
-      location: 'Varanasi, Uttar Pradesh',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMXZPFqiQsGAb3eWPW81QL2HqM3hS9nPgAoA&s',
-      programs: 'MLT, OTT',
-      accreditation: 'UGC Recognised',
-    },
-    {
-      name: 'Awadh Public Charitable Trust (APCT)',
-      location: 'Delhi',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHvRRLFZEkwvlsT7b-bIjAvde3r_3x22guwA&s',
-      programs: 'MLT, OTT',
-      accreditation: "NAAC 'A' Graded",
-    }, {
-      name: 'Apeejay Stya University',
-      location: 'Gurugram, Haryana',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZkObc2RFbosrBgArPF0WaUXMsumj7YKb2vQ&s',
-      programs: 'MLT, OTT, MRIT',
-      accreditation: "NAAC 'A' Graded",
-    },
-    {
-      name: 'Ashoka Institute of Technology & Management',
-      location: 'Varanasi, Uttar Pradesh',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMXZPFqiQsGAb3eWPW81QL2HqM3hS9nPgAoA&s',
-      programs: 'MLT, OTT',
-      accreditation: 'UGC Recognised',
-    },
-    {
-      name: 'Awadh Public Charitable Trust (APCT)',
-      location: 'Delhi',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHvRRLFZEkwvlsT7b-bIjAvde3r_3x22guwA&s',
-      programs: 'MLT, OTT',
-      accreditation: "NAAC 'A' Graded",
+// const campuses = [
+//     {
+//       name: 'Apeejay Stya University',
+//       location: 'Gurugram, Haryana',
+//       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZkObc2RFbosrBgArPF0WaUXMsumj7YKb2vQ&s',
+//       programs: 'MLT, OTT, MRIT',
+//       accreditation: "NAAC 'A' Graded",
+//     },
+//     {
+//       name: 'Ashoka Institute of Technology & Management',
+//       location: 'Varanasi, Uttar Pradesh',
+//       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMXZPFqiQsGAb3eWPW81QL2HqM3hS9nPgAoA&s',
+//       programs: 'MLT, OTT',
+//       accreditation: 'UGC Recognised',
+//     },
+//     {
+//       name: 'Awadh Public Charitable Trust (APCT)',
+//       location: 'Delhi',
+//       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHvRRLFZEkwvlsT7b-bIjAvde3r_3x22guwA&s',
+//       programs: 'MLT, OTT',
+//       accreditation: "NAAC 'A' Graded",
+//     },
+//     {
+//       name: 'Apeejay Stya University',
+//       location: 'Gurugram, Haryana',
+//       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZkObc2RFbosrBgArPF0WaUXMsumj7YKb2vQ&s',
+//       programs: 'MLT, OTT, MRIT',
+//       accreditation: "NAAC 'A' Graded",
+//     },
+//     {
+//       name: 'Ashoka Institute of Technology & Management',
+//       location: 'Varanasi, Uttar Pradesh',
+//       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMXZPFqiQsGAb3eWPW81QL2HqM3hS9nPgAoA&s',
+//       programs: 'MLT, OTT',
+//       accreditation: 'UGC Recognised',
+//     },
+//     {
+//       name: 'Awadh Public Charitable Trust (APCT)',
+//       location: 'Delhi',
+//       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHvRRLFZEkwvlsT7b-bIjAvde3r_3x22guwA&s',
+//       programs: 'MLT, OTT',
+//       accreditation: "NAAC 'A' Graded",
+//     }, {
+//       name: 'Apeejay Stya University',
+//       location: 'Gurugram, Haryana',
+//       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZkObc2RFbosrBgArPF0WaUXMsumj7YKb2vQ&s',
+//       programs: 'MLT, OTT, MRIT',
+//       accreditation: "NAAC 'A' Graded",
+//     },
+//     {
+//       name: 'Ashoka Institute of Technology & Management',
+//       location: 'Varanasi, Uttar Pradesh',
+//       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMXZPFqiQsGAb3eWPW81QL2HqM3hS9nPgAoA&s',
+//       programs: 'MLT, OTT',
+//       accreditation: 'UGC Recognised',
+//     },
+//     {
+//       name: 'Awadh Public Charitable Trust (APCT)',
+//       location: 'Delhi',
+//       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHvRRLFZEkwvlsT7b-bIjAvde3r_3x22guwA&s',
+//       programs: 'MLT, OTT',
+//       accreditation: "NAAC 'A' Graded",
 
-    },
-  ];
+//     },
+//   ];
  
 
   const faqs = [
@@ -136,11 +133,11 @@ const campuses = [
 
 const MLTProgram = () => {
   const handleOpenPDF = () => {
-    window.open('medlabs_brochure.pdf', '_blank');
+    window.open('MedLabs_brochure.pdf', '_blank');
   }
 
- const [showAll, setShowAll] = useState(false);
-  const displayedCampuses = showAll ? campuses : campuses.slice(0, 3);
+//  const [showAll, setShowAll] = useState(false);
+//   const displayedCampuses = showAll ? campuses : campuses.slice(0, 3);
 
 
  const [showModal, setShowModal] = useState(false);
@@ -163,7 +160,7 @@ const MLTProgram = () => {
             <ul className="list-unstyled fs-5">
               <li><strong>✅ Domain:</strong> Diagnostic</li>
               <li><strong>✅ Eligibility:</strong>10+2 (any stram,Pass)*</li>
-              <li><strong>✅ Starting Salary:</strong> ₹35,000/month </li>
+              <li><strong>✅ Fees:</strong> ₹1,00,000/years </li>
             </ul>
 
                <ApplyNow show={showModal} handleClose={() => setShowModal(false)}/>  
@@ -174,7 +171,7 @@ const MLTProgram = () => {
         </Col>
         <Col md={6}>
           <Card>
-            <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLFz9ExIWtTOCBIhGiUiVEBA4SBHYbtLJPgQ&s" fluid alt="MLT Program Banner" rounded />
+            <Image src="MLT.png" fluid alt="MLT Program Banner" rounded />
           </Card></Col>
       </Row>
 
@@ -185,25 +182,7 @@ const MLTProgram = () => {
 
       <Row className='my-5'>
 
-        {/* First Row: Right to Left  */}
-        <h4 className='text-center p-5'><b>Top Hospitals and Heathecare Brands</b> for MLT Graduates</h4>
-        <Row className="overflow-hidden mb-4 ">
-          <div className="logo-strip strip-rtl">
-            {logos.map((logo, idx) => (
-              <Image key={idx} src={logo} alt={`Logo ${idx}`} className="mx-3 logo-img rounded-circle" />
-            ))}
-
-          </div>
-        </Row>
-
-        {/* Second Row: Left to Right */}
-        <Row className="overflow-hidden">
-          <div className="logo-strip strip-ltr">
-            {logos.map((logo, idx) => (
-              <Image key={idx} src={logo} alt={`Logo ${idx}`} className="mx-3 logo-img  rounded-circle" />
-            ))}
-          </div>
-        </Row>
+       
 
 
 
@@ -267,7 +246,7 @@ const MLTProgram = () => {
         ))}
       </Row>
 
-      <Container className="my-5">
+      {/* <Container className="my-5">
         <h2 className="text-center mb-4">Partner Campuses Offering MLT</h2>
         <Row xs={1} md={3} className="g-4">
           {displayedCampuses.map((campus, idx) => (
@@ -302,7 +281,7 @@ const MLTProgram = () => {
         )}
 
 
-      </Container>
+      </Container> */}
       <Container className="my-5">
         <Row>
           <Col md={6}> <h1 className="text-center mb-4 boader">Frequently Asked Questions</h1></Col>

@@ -1,0 +1,42 @@
+.carousel-indicators [data-bs-target] {
+  background-color: #000 !important; /* black dots */
+}
+.testimonial-card {
+  max-width: 22rem;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #6c757d;
+}
+
+.testimonial-quote {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+  text-align: justify;
+  font-style: italic;
+}
+
+.testimonial-row {
+  justify-content: center;
+
+}

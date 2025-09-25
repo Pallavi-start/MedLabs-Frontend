@@ -44,6 +44,14 @@ const AIprogram =[
     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx3sq95XSTNUVEh4N9KQj8cGwqhnVmvtU3ng&s',
     href: "/PharmaForecastingTrainingProgram"
   }, 
+   {
+    title:'Commercial Analytics',
+    description:'Master the skills to analyze market performance, sales data, and business outcomes in the pharmaceutical and healthcare industries.',
+    duration:'2 Months',
+    eligibility: 'Btech/Mtech/MCA/BPharma/Mpharma',
+    img: '/commercialAnalytics.png',
+    href: "/CommericialAnalytics"
+  }
 ]
 const programs = [
  

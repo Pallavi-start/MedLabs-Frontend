@@ -1,75 +1,74 @@
-// HEORProgram.jsx
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import { Row, Col, Image, Button, Container, Card, Accordion } from 'react-bootstrap';
-
 import ApplyNow from './ApplyNow';
 
-const roles = [
-  'HEOR Analyst / Consultant',
-  'Market Access Specialist',
-  'RWE Scientist',
-  'Health Policy Researcher',
-  'Pharma / Healthcare Consultant'
-];
-
 const outcomes = [
-  'Pharmacoeconomics and health outcomes research fundamentals',
-  'Techniques for cost-effectiveness, cost-utility, and budget impact analysis',
-  'Real-World Evidence (RWE) methods and data analytics',
-  'Market access and healthcare decision-making frameworks',
-  'Policy insights and HTA (Health Technology Assessment) methods'
+  'Fundamentals of Health Economics and Outcomes Research (HEOR)',
+  'Real-World Evidence (RWE) generation and applications',
+  'Pharmacoeconomics, cost-effectiveness & budget impact analysis',
+  'Patient-reported outcomes and quality of life measures',
+  'Hands-on tools: Excel, Power BI, and HEOR modeling software',
+  'Ethical, policy, and regulatory aspects in HEOR'
 ];
 
-const programs = [
-  {
-    title: 'Certificate in HEOR',
-    duration: '2 months',
-    fees: '₹49,999/-',
-  },
-  
- 
-]; 
-
-
+const heorRoles = [
+  'HEOR Analyst',
+  'Real-World Evidence (RWE) Specialist',
+  'Pharmacoeconomics Researcher',
+  'Market Access Associate',
+  'Health Policy Consultant',
+  'HEOR Scientist in Pharma/Consulting'
+];
 
 const HEORProgram = () => {
- 
-const handleOpenPDF = () => {
-  const link = document.createElement("a");
-  link.href = '/HEOR BROCHURE ff.pdf';   // file must be inside public/
-  link.download = "HEOR BROCHURE ff.pdf";
-  link.click();
-};
-
   const [showModal, setShowModal] = useState(false);
+
+  // ✅ Brochure download
+  const handleOpenPDF = () => {
+    const link = document.createElement("a");
+    link.href = '/HEOR BROCHURE ff.pdf';   // file should be in public/
+    link.download = 'HEOR BROCHURE ff.pdf';
+    link.click();
+  };
 
   return (
     <Container fluid className="bg-light">
       {/* Hero Section */}
-      <Row className="py-5">
+      <Row className="py-5 align-items-center">
         <Col md={6} className="text-start px-5">
-          <h1 className="mb-3">Health Economics & Outcomes Research (HEOR)</h1>
+          <h1 className="mb-3">HEOR & Market Access</h1>
           <h5 className="lead">
-            Shape healthcare decision-making and market access with advanced skills in HEOR and Real-World Evidence.
+            Gain expertise in Health Economics and Outcomes Research to support evidence-based decision-making in healthcare and pharma.
           </h5>
           <ul className="list-unstyled my-4 fs-5">
-            <li><strong>✅Domain:</strong> Health Economics & Real-World Evidence</li>
-            <li><strong>✅Eligibility:</strong> Graduate in Pharma / Life Sciences / Biotechnology / Medicine</li>
-            <li><strong>✅Starting Salary:</strong> ₹4–8 LPA (varies by role)</li>
+            <li><strong>✅ Domain:</strong> Health Economics & Outcomes Research</li>
+            <li><strong>✅ Eligibility:</strong> BTech / MTech / MCA / BPharma / MPharma</li>
+            <li><strong>✅ Fees:</strong> ₹35,000/-</li>
           </ul>
+
           <div className="d-flex gap-3">
-            <ApplyNow show={showModal} handleClose={() => setShowModal(false)} />
-            <Button onClick={() => setShowModal(true)} variant="secondary" className="mx-3">
-              Apply Now<span>&#8599;</span>
+            {/* Admission Form Modal */}
+            <ApplyNow 
+              show={showModal} 
+              handleClose={() => setShowModal(false)} 
+              onSuccess={handleOpenPDF}   // ✅ after submit → download brochure
+            />
+
+            {/* Apply Now Button */}
+            <Button onClick={() => setShowModal(true)} variant="secondary">
+              Apply Now <span>&#8599;</span>
             </Button>
-                 <Button
-                  onClick={handleOpenPDF}
-                  variant="outline-secondary"
-                   >
-                 📘 Get Brochure
-                </Button>
+
+            {/* Get Brochure → also opens Form */}
+            <Button
+              onClick={() => setShowModal(true)}
+              variant="outline-secondary"
+            >
+              📘 Get Brochure
+            </Button>
           </div>
         </Col>
+
         <Col md={6}>
           <Image
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScwXUQMdkguUVOOaJ7jUHD_-pdCN7885Q9Dw&s"
@@ -81,13 +80,16 @@ const handleOpenPDF = () => {
         </Col>
       </Row>
 
-      {/* Roles Section */}
+      {/* Career Opportunities */}
       <Container className="my-5 p-5">
-        <h1 className="text-center mb-4 p-5">Career Opportunities in HEOR</h1>
-        <Row md={4} className="g-3 justify-content-center">
-          {roles.map((role, idx) => (
+        <h1 className="text-center mb-4">Career Opportunities in HEOR</h1>
+        <Row xs={1} sm={2} md={3} lg={4} className="g-4 justify-content-center">
+          {heorRoles.map((role, idx) => (
             <Col key={idx}>
-              <Button variant="outline-secondary" className="w-100 py-3 fw-semibold text-dark">
+              <Button 
+                variant="light" 
+                className="w-100 py-3 fw-semibold border rounded-3 shadow-sm text-dark"
+              >
                 {role}
               </Button>
             </Col>
@@ -96,17 +98,17 @@ const handleOpenPDF = () => {
       </Container>
 
       {/* Outcomes Section */}
-      <Row className="my-5 bg-secondary rounded text-white">
+      <Row className="my-5 bg-secondary rounded text-white align-items-center">
         <Col md={6}>
           <Image
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMjoGayCYqW8Bv142Qf11-177VE9e5zGznqw&s"
-            alt="HEOR Outcomes"
+            alt="HEOR outcomes"
             fluid
             rounded
             className="w-100 p-5 rounded"
           />
         </Col>
-        <Col md={5}>
+        <Col md={6}>
           <Card.Header as="h1" className="text-center p-4">What You'll Learn</Card.Header>
           <ul>
             {outcomes.map((point, idx) => (
@@ -118,28 +120,6 @@ const handleOpenPDF = () => {
         </Col>
       </Row>
 
-       {/* Programs Section */}
-       <Row className="p-5">
-     <Col>
-       <h1 className="mb-4 text-center">Programs Offered</h1>
-       <Row className="g-4 justify-content-center">
-         {programs.map((program, idx) => (
-           <Col md={4} lg={3} key={idx} className="d-flex justify-content-center">
-             <Card className="h-100 shadow-sm text-center" style={{ minWidth: "250px" }}>
-               <Card.Body>
-                 <Card.Title>{program.title}</Card.Title>
-                 <Card.Text>
-                   <strong>Duration:</strong> {program.duration} <br />
-                   <strong>Fees:</strong> {program.fees}
-                 </Card.Text>
-               </Card.Body>
-             </Card>
-           </Col>
-         ))}
-       </Row>
-     </Col>
-   </Row>
-
       {/* FAQ Section */}
       <Row className="p-5">
         <Col md={6}>
@@ -148,27 +128,27 @@ const handleOpenPDF = () => {
         <Col md={6}>
           <Accordion>
             <Accordion.Item eventKey="0" className="mb-3 rounded p-2">
-              <Accordion.Header>Who is this program for?</Accordion.Header>
+              <Accordion.Header>Who can join this program?</Accordion.Header>
               <Accordion.Body>
-                This program is designed for graduates who want to enter the healthcare, pharma, or consulting industry with HEOR expertise.
+                This program is for pharmacy, life sciences, public health, and healthcare management professionals.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1" className="mb-3 rounded p-2">
               <Accordion.Header>What tools will I learn?</Accordion.Header>
               <Accordion.Body>
-                Students gain exposure to statistical tools, RWE data platforms, and health economics modeling tools.
+                You will learn Excel, Power BI, real-world data analysis, and HEOR modeling frameworks.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="2" className="mb-3 rounded p-2">
-              <Accordion.Header>What are the job opportunities?</Accordion.Header>
+              <Accordion.Header>What job opportunities are available?</Accordion.Header>
               <Accordion.Body>
-                Graduates can work as HEOR analysts, market access consultants, policy researchers, or RWE scientists.
+                Graduates can work in pharma, consulting, market access, or policy research as HEOR Analysts, RWE Specialists, or Health Policy Consultants.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="3" className="mb-3 rounded p-2">
-              <Accordion.Header>What support is provided?</Accordion.Header>
+              <Accordion.Header>Will I get placement support?</Accordion.Header>
               <Accordion.Body>
-                Career mentorship, live projects, HEOR case studies, and placement support with MedLabs partner companies are included.
+                Yes, MedLabs provides mentorship, real-world projects, and placement assistance with its partner organizations.
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
@@ -179,4 +159,3 @@ const handleOpenPDF = () => {
 };
 
 export default HEORProgram;
-

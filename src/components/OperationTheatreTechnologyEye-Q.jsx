@@ -66,7 +66,7 @@ import ApplyNow from './ApplyNow';
 
 const OperationTheatreTechnologyEye = () => {
    const handleOpenPDF = () => {
-    window.open('medlabs_brochure.pdf', '_blank');
+    window.open('MedLabs_brochure.pdf', '_blank');
    }
    const [showModal, setShowModal] = useState(false);
   return (

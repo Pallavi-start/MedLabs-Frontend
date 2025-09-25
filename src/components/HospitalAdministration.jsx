@@ -5,9 +5,7 @@ import { useState } from 'react';
 function HospitalAdministration() {
   const [showModal, setShowModal] = useState(false);
 
-  const logos = [
-    'logo1.webp', 'logo2.png', 'logo3.png', 'logo3.png', 'logo1.webp', 'logo6.png', 'logo2.png', 'logo3.png', 'logo4.png', 'logo1.webp', 'logo2.png'
-  ];
+ 
 
   const roles = [
     "Hospital Administrator",
@@ -49,7 +47,7 @@ function HospitalAdministration() {
   ];
 
   const handleOpenPDF = () => {
-    window.open('medlabs_brochure.pdf', '_blank');
+    window.open('MedLabs_brochure.pdf', '_blank');
   }
  
 
@@ -65,7 +63,7 @@ function HospitalAdministration() {
             <ul className="list-unstyled fs-5">
               <li><strong>✅Domain:</strong> Administrative</li>
               <li><strong>✅Eligibility:</strong> 10+2 (any stream, pass)</li>
-              <li><strong>✅Starting Salary:</strong> Up to ₹35,000/month</li>
+              <li><strong>✅Fees:</strong> Up to ₹3,00,000/Years</li>
             </ul>
            <ApplyNow show={showModal} handleClose={() => setShowModal(false)}/>  
           <Button  onClick={() => setShowModal(true)} variant="secondary" className="mx-3" >Apply Now <span>&#8599;</span></Button>
@@ -75,34 +73,11 @@ function HospitalAdministration() {
         </Col>
         <Col md={6}>
           <Card>
-            <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb-NLWhU9wxAOd2pzkrEg4y400V_QaItXuWg&s" alt="MLT Program Banner" rounded />
+            <Image src="https://media.licdn.com/dms/image/v2/D5612AQH2heo6D80YCg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1706788460035?e=2147483647&v=beta&t=O2w2YpPzbLeG8JP9QCdvRqH15mURxG1-r8aqgZwCCYI" alt="MLT Program Banner" rounded />
           </Card>
         </Col>
       </Row>
 
-
-      <Row className='my-5'>
-
-        {/* First Row: Right to Left  */}
-        <h4 className='text-center p-5'><b>Top Hospitals and Heathecare Brands</b> for HT Graduates</h4>
-        <Row className="overflow-hidden mb-4 ">
-          <div className="logo-strip strip-rtl">
-            {logos.map((logo, idx) => (
-              <Image key={idx} src={logo} alt={`Logo ${idx}`} className="mx-3 logo-img rounded-circle" />
-            ))}
-
-          </div>
-        </Row>
-
-        {/* Second Row: Left to Right */}
-        <Row className="overflow-hidden">
-          <div className="logo-strip strip-ltr">
-            {logos.map((logo, idx) => (
-              <Image key={idx} src={logo} alt={`Logo ${idx}`} className="mx-3 logo-img  rounded-circle" />
-            ))}
-          </div>
-        </Row>
-      </Row>
 
 
       <h1 className="text-center mb-4 p-5">Common Job Roles for MLT Professionals</h1>
@@ -119,7 +94,7 @@ function HospitalAdministration() {
       <Row className=" my-5 bg-secondary rounded text-white">
         <Col md={6}>
           <Image
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5E9aN-bvfTi-twRIuIU6FnAxalYLOaRHV4A&s"
+            src="https://www.shutterstock.com/shutterstock/videos/3597399755/thumb/1.jpg?ip=x480"
             alt="Lab technician performing diagnostic tests"
             fluid
 
@@ -150,12 +125,12 @@ function HospitalAdministration() {
           <ul className='list-unstyled fs-5 bg-secondary rounded-5 text-start text-white px-5 py-2'>
             <li><strong>B.Voc.HP</strong></li><hr></hr>
             <li><strong>Duration:</strong> 3 Years <br />(includes 18 months of integrated internship)</li><br />
-            <li><strong>Fees:</strong> ₹3,90,000</li>
+            <li><strong>Fees:</strong> ₹3,00,000</li>
             <li><strong>Payment Options:</strong><br /> Monthly, Semester-wise or Yearly</li>
           </ul>
         </Col>
       </Row>
-      <Row className='justify-content-center p-5'>
+      {/* <Row className='justify-content-center p-5'>
         <h1 className=" mb-4">Partner Campuses Offering HA</h1>
         <Col md={4} >
 
@@ -183,7 +158,7 @@ function HospitalAdministration() {
           </Card>
 
         </Col>
-      </Row>
+      </Row> */}
 
       <Container className="py-5">
         <Row>

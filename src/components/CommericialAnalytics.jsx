@@ -1,31 +1,32 @@
 import React, { useState } from 'react';
-import { Row, Col, Image, Button, Container, Card, Accordion } from 'react-bootstrap';
+import { Row, Col, Image, Button, Container, Accordion } from 'react-bootstrap';
 import ApplyNow from './ApplyNow';
 
 const outcomes = [
-  'Understanding CI frameworks, ethics, and pharma-specific methodologies',
-  'Techniques for monitoring competitors, pipeline drugs, and clinical trials',
-  'Patent landscaping, regulatory intelligence, and market access research',
-  'Hands-on training in secondary research databases and tools',
-  'Business communication, presentations, and consulting mindset for pharma clients'
+  'Fundamentals of Commercial Analytics in pharma and healthcare',
+  'Market access, sales forecasting, and revenue optimization techniques',
+  'Hands-on training in Excel, SQL, Python, and visualization tools like Power BI/Tableau',
+  'Analytics for brand performance, promotional effectiveness, and customer insights',
+  'Ethical, compliance, and data privacy considerations in pharmaceutical analytics'
 ];
 
-const ciRoles = [
-  'Competitive Intelligence Analyst',
-  'Market Research Specialist',
-  'Business Strategy Consultant',
-  'Pharma Competitive Intelligence Manager',
-  'Healthcare Market Analyst'
+const commercialAnalyticsRoles = [
+  'Commercial Analytics Specialist',
+  'Sales & Marketing Data Analyst',
+  'Business Intelligence Analyst',
+  'Market Access Analyst',
+  'Pharma Commercial Insights Consultant',
+  'Forecasting & Strategy Analyst'
 ];
 
-const CompetitiveIntelligence = () => {
+const CommercialAnalyticsTraining = () => {
   const [showModal, setShowModal] = useState(false);
 
   // ✅ Brochure download after form submission
   const handleOpenPDF = () => {
     const link = document.createElement("a");
-    link.href = '/CompetitiveIntelligence-TrainingProgram.pdf'; // file must be inside public/
-    link.download = 'CompetitiveIntelligence-TrainingProgram.pdf';
+    link.href = '/Commercial Analytics Training Program.pdf'; // place file in public/
+    link.download = "Commercial Analytics Training Program.pdf";
     link.click();
   };
 
@@ -34,28 +35,21 @@ const CompetitiveIntelligence = () => {
       {/* Hero Section */}
       <Row className="py-5 align-items-center">
         <Col md={6} className="text-start px-5">
-          <h1 className="mb-3">Competitive Intelligence Training Program</h1>
+          <h1 className="mb-3">Commercial Analytics </h1>
           <h5 className="lead">
-            Gain expertise in pharma and healthcare competitive intelligence to support strategic business decisions.
+            Master the skills to analyze market performance, sales data, and business outcomes in the pharmaceutical and healthcare industries.
           </h5>
           <ul className="list-unstyled my-4 fs-5">
-            <li><strong>✅ Domain:</strong> Market Research & Competitive Strategy (Pharma)</li>
+            <li><strong>✅ Domain:</strong> Pharma Business & Data Analytics</li>
             <li><strong>✅ Eligibility:</strong> BTech / MTech / MCA / BPharma / MPharma</li>
-            <li><strong>✅ Fees:</strong> ₹49,999<sup>*</sup></li>
+            <li><strong>✅ Fees:</strong> ₹20,000/-</li>
           </ul>
 
           <div className="d-flex gap-3">
-            {/* ApplyNow modal */}
-            <ApplyNow 
-              show={showModal} 
-              handleClose={() => setShowModal(false)} 
-              onSuccess={handleOpenPDF} // automatically downloads brochure
-            />
-
+            <ApplyNow show={showModal} handleClose={() => setShowModal(false)} onSuccess={handleOpenPDF} />
             <Button onClick={() => setShowModal(true)} variant="secondary">
               Apply Now <span>&#8599;</span>
             </Button>
-
             <Button onClick={() => setShowModal(true)} variant="outline-secondary">
               📘 Get Brochure
             </Button>
@@ -64,8 +58,8 @@ const CompetitiveIntelligence = () => {
 
         <Col md={6}>
           <Image
-            src="https://img.freepik.com/free-photo/businessman-analyzing-data-charts-laptop_53876-25079.jpg"
-            alt="Competitive Intelligence"
+            src="/commercialAnalytics.png" // file in public/
+            alt="Commercial Analytics"
             fluid
             rounded
             className="w-100 h-100 object-fit-cover"
@@ -75,9 +69,9 @@ const CompetitiveIntelligence = () => {
 
       {/* Career Opportunities */}
       <Container className="my-5 p-5">
-        <h1 className="text-center mb-4 p-5">Career Opportunities in Competitive Intelligence</h1>
+        <h1 className="text-center mb-4 p-5">Career Opportunities in Commercial Analytics</h1>
         <Row xs={1} sm={2} md={3} lg={4} className="g-4 justify-content-center">
-          {ciRoles.map((role, idx) => (
+          {commercialAnalyticsRoles.map((role, idx) => (
             <Col key={idx}>
               <Button 
                 variant="light" 
@@ -94,15 +88,15 @@ const CompetitiveIntelligence = () => {
       <Row className="my-5 bg-secondary rounded text-white align-items-center">
         <Col md={6}>
           <Image
-            src="https://img.freepik.com/premium-photo/competitive-analysis-strategy-business-intelligence-dashboard_771335-42368.jpg"
-            alt="Competitive Intelligence Outcomes"
+            src="https://www.shutterstock.com/shutterstock/videos/3597399755/thumb/1.jpg?ip=x480"
+            alt="Analytics outcomes"
             fluid
             rounded
             className="w-100 p-5 rounded"
           />
         </Col>
         <Col md={6}>
-          <Card.Header as="h1" className="text-center p-4">What You'll Learn</Card.Header>
+          <h2 className="text-center p-4">What You'll Learn</h2>
           <ul>
             {outcomes.map((point, idx) => (
               <li key={idx} className="mb-3 text-start fs-5">{point}</li>
@@ -121,25 +115,25 @@ const CompetitiveIntelligence = () => {
             <Accordion.Item eventKey="0" className="mb-3 rounded p-2">
               <Accordion.Header>Who is this program for?</Accordion.Header>
               <Accordion.Body>
-                Ideal for graduates and professionals who want to enter the pharma and healthcare consulting industry with a focus on competitive intelligence and strategic research.
+                Designed for pharma graduates, MBAs, data enthusiasts, and professionals aiming for commercial and business analytics roles.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1" className="mb-3 rounded p-2">
-              <Accordion.Header>What skills will I gain?</Accordion.Header>
+              <Accordion.Header>What tools will I learn?</Accordion.Header>
               <Accordion.Body>
-                You’ll master secondary research, pharma databases, patent analysis, pipeline tracking, and CI reporting frameworks.
+                Hands-on experience with Excel, SQL, Python, Power BI, Tableau, and pharma-specific analytics frameworks.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="2" className="mb-3 rounded p-2">
-              <Accordion.Header>What are the career opportunities?</Accordion.Header>
+              <Accordion.Header>What job opportunities are available?</Accordion.Header>
               <Accordion.Body>
-                Graduates can work with pharma/healthcare consulting firms, CI agencies, KPOs, or in-house strategy teams of pharma companies.
+                Business Analyst, Commercial Insights Specialist, Market Access Analyst, Pharma BI Consultant, and more.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="3" className="mb-3 rounded p-2">
-              <Accordion.Header>Is placement support available?</Accordion.Header>
+              <Accordion.Header>What support is provided?</Accordion.Header>
               <Accordion.Body>
-                Yes, MedLabs provides placement assistance, mock interviews, and connects students with its pharma & consulting partner network.
+                Mentorship, real-world case studies, industry projects, and placement assistance with MedLabs’ partner organizations.
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
@@ -149,4 +143,4 @@ const CompetitiveIntelligence = () => {
   );
 };
 
-export default CompetitiveIntelligence;
+export default CommercialAnalyticsTraining;

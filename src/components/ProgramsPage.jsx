@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel, Card, Button, Row, Col, Container, Modal, } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useState, } from 'react';
-
+import './ProgramsPage.css'
 
 const AIprogramData = [
  
@@ -48,28 +48,36 @@ const AIprogramData = [
     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx3sq95XSTNUVEh4N9KQj8cGwqhnVmvtU3ng&s',
     href: "/PharmaForecastingTrainingProgram"
   }, 
+  {
+    title:'Commercial Analytics',
+    description:'Master the skills to analyze market performance, sales data, and business outcomes in the pharmaceutical and healthcare industries.',
+    duration:'2 Months',
+    eligibility: 'Btech/Mtech/MCA/BPharma/Mpharma',
+    img: '/commercialAnalytics.png',
+    href: "/CommericialAnalytics"
+  }
 ];
 
 
 
 const programData = [
-  {
-    title: 'Bachelor of Optometry (Optom)',
-    description: 'Master the science of vision care with exclusive Lenskart training modules and hands-on internships at Lenskart stores.',
-    degree: 'MedLabs Powered Degree Programs, B.Optom (SureStart with Lenskart)',
-    duration: '4 years (24 months internship at Lenskart)',
-    eligibility: 'Min 50% in PCM/PCB in 12th',
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxFKv1tAOqKY4PBnobotsjPJTcjx9JFRvDaw&s',
-    href: "/OptometryLenskart"
-  },
+  // {
+  //   title: 'Bachelor of Optometry (Optom)',
+  //   description: 'Master the science of vision care with exclusive Lenskart training modules and hands-on internships at Lenskart stores.',
+  //   degree: 'MedLabs Powered Degree Programs, B.Optom (SureStart with Lenskart)',
+  //   duration: '4 years (24 months internship at Lenskart)',
+  //   eligibility: 'Min 50% in PCM/PCB in 12th',
+  //   img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxFKv1tAOqKY4PBnobotsjPJTcjx9JFRvDaw&s',
+  //   href: "/OptometryLenskart"
+  // },
   {
     title: 'Bachelor of Medical Laboratory Technology (MLT)',
     description: 'Be the backbone of medical diagnosis and master the science of laboratory testing.',
     degree: 'MedLabs Powered Degree Programs, B.Sc. (Hons.), B.Sc., or B.Voc.',
     duration: '3 or 4 years (18-24 months integrated internship)',
     eligibility: '10+2 (any stream, pass)',
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxFKv1tAOqKY4PBnobotsjPJTcjx9JFRvDaw&s',
-    href: "/MedicalLaboratoryTechnology"
+    img: "MLT.png",
+    href: "MLT.png"
   },
   {
     title: 'Bachelor of Hospital Administration (HA)',
@@ -77,39 +85,39 @@ const programData = [
     degree: 'MedLabs Powered Degree Programs, B.Voc.',
     duration: '3 years (18 months integrated internship)',
     eligibility: '10+2 (any stream, pass)',
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_cfcznDh8hj_4RPjs6VdqIz4R8q6U0kAzYw&s',
+    img: 'https://media.licdn.com/dms/image/v2/D5612AQH2heo6D80YCg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1706788460035?e=2147483647&v=beta&t=O2w2YpPzbLeG8JP9QCdvRqH15mURxG1-r8aqgZwCCYI',
     href: "/HospitalAdminitration"
   },
 
 
 
-  {
-    title: 'Bachelor of Operation Theatre Technology (OTT)',
-    description: 'Master surgical technology and transform operation theatre management.',
-    degree: 'B.Sc. (Hons.), B.Sc. or B.Voc.',
-    duration: '3 or 4 years (18-24 months internship)',
-    eligibility: '10+2 (any stream, pass)',
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxFKv1tAOqKY4PBnobotsjPJTcjx9JFRvDaw&s',
-    href: "/OperationTheatreTechnology"
-  },
+  // {
+  //   title: 'Bachelor of Operation Theatre Technology (OTT)',
+  //   description: 'Master surgical technology and transform operation theatre management.',
+  //   degree: 'B.Sc. (Hons.), B.Sc. or B.Voc.',
+  //   duration: '3 or 4 years (18-24 months internship)',
+  //   eligibility: '10+2 (any stream, pass)',
+  //   img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxFKv1tAOqKY4PBnobotsjPJTcjx9JFRvDaw&s',
+  //   href: "/OperationTheatreTechnology"
+  // },
   {
     title: 'Bachelor of Medical Radiology and Imaging Technology (MRIT)',
     description: 'Master advanced imaging and transform diagnostics with precision.',
     degree: 'B.Sc. (Hons.) or B.Sc.',
     duration: '3 years (18-24 months internship)',
     eligibility: '10+2 (any stream, pass)',
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxFKv1tAOqKY4PBnobotsjPJTcjx9JFRvDaw&s',
+    img: 'https://www.ahu.edu/sites/default/files/styles/og_image/public/media/radiologists-examining-images.jpg?itok=f3r8T7A7',
     href: "/MedicalRadiologyAndImagingTechnology"
   },
-  {
-    title: 'OTT with Eye-Q Training Modules',
-    description: 'Hands-on internships at Eye-Q hospitals and exclusive training modules.',
-    degree: 'B.Voc. (SureStart with Eye-Q)',
-    duration: '3 years (18 months internship)',
-    eligibility: '10+2 (any stream, pass)',
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxFKv1tAOqKY4PBnobotsjPJTcjx9JFRvDaw&s',
-    href: "/OperationTheatreTechnologyEye-Q"
-  },
+  // {
+  //   title: 'OTT with Eye-Q Training Modules',
+  //   description: 'Hands-on internships at Eye-Q hospitals and exclusive training modules.',
+  //   degree: 'B.Voc. (SureStart with Eye-Q)',
+  //   duration: '3 years (18 months internship)',
+  //   eligibility: '10+2 (any stream, pass)',
+  //   img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxFKv1tAOqKY4PBnobotsjPJTcjx9JFRvDaw&s',
+  //   href: "/OperationTheatreTechnologyEye-Q"
+  // },
 
 
 ];
@@ -141,102 +149,66 @@ const edgePoints = [
 ];
 const successStories = [
   {
-    video: '/',
+    title: "Data Analytics in Pharma",
+    name: "Nachiket Kulkarni - Birlasoft",
+    quote: `“The Data Analytics in Pharma course gave me the skills I needed. Hands-on pharma datasets and practical training helped me confidently build dashboards in Tableau and SQL. Within a month, I landed a Data Analyst role at IQVIA.”`,
+  },
+  {
+    title: "Clinical Research & Pharmacovigilance",
+    name: "Varun Gupta - ZS, P",
+    quote: `This pharmacovigilance course made my career shift possible. Practical training and excellent support helped me understand drug safety and case processing. Two weeks after finishing, I was selected as a Drug Safety Associate at Accenture.`,
+  },
+  {
+    title: "Health Economics & Outcomes Research (HEOR)",
+    name: "Sneha Mhaske - Axtria,",
+    quote: `The HEOR program exceeded my expectations. Practical case studies and modeling assignments helped me gain confidence, and I secured an HEOR Analyst role at Parexel..`,
+  },
 
-    name: 'Manisha',
-    role: 'Medical Lab Technologist at Neuro Equilibrium',
-    quote:
-      'The focus on foundational skills—truly prepared me for the real healthcare world. I owe my success to the education I received at MedLabs.',
-  },
-  {
-    video: '/',
-    name: 'Hemmant',
-    role: 'Medical Lab Technologist at Dr. Remedies Labs',
-    quote:
-      "After NEET didn't work out, MedLabs gave me a new direction—where learning felt inclusive and engaging.",
-  },
-  {
-    video: '/',
-    name: 'Pooja',
-    role: 'OTT Student at MedLabs',
-    quote:
-      'MedLabs helped me earn the white coat and turn my dream into reality.',
-  },
-];
+{
+  title: "Pharma Forecasting & Market Access",
+  name: "Sneha Mhaske - Axtria",
+  quote: "This course helped me transition from sales to analytics with real industry exercises. I was selected by ZS Associates as a Market Access Analyst within weeks."
+}
+]
 
 const blogPosts = [
   {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxFKv1tAOqKY4PBnobotsjPJTcjx9JFRvDaw&s',
-    title: 'Radiology Courses in India: Career Scope',
-    description:
-      'Radiology Technicians play a key role in medical diagnosis using imaging tools like X-rays and MRIs. Explore the career opportunities in this fast-growing healthcare field.',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLPXV8ZF2sbbAOlOtwtt7gobr7EIS-1VNqmw&s', // Replace with relevant image URL
+    title: 'Breaking Into Pharma Analytics: Skills Required by Pharma GCC Industries',
+    description: "Pharmaceutical companies are rapidly adopting data-driven analytics for drug launches, sales forecasting, and patient trend insights, creating high demand for professionals who can turn data into actionable business decisions.",
+    readTime: '10 min read',
+  },
+  {
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIofcsqJ--3C19uz-0Ii6162-e_pc3S696oA&s',
+    title: 'Pharmacovigilance Careers: How to Move from Fresher to Drug Safety Associate',
+    description: `Pharmacovigilance ensures medicine safety by monitoring adverse drug reactions. Hands-on training helps freshers land Drug Safety Associate roles at companies like Accenture and Cognizant.`,
     readTime: '8 min read',
   },
   {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLFz9ExIWtTOCBIhGiUiVEBA4SBHYbtLJPgQ&s',
-    title: 'Operation Theatre Technician: Career Scope',
-    description:
-      'From prepping operation theatres to supporting surgeons, OT Technicians are vital to every procedure. Discover the course, eligibility, and career path.',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRldH60R3mi9H8w6f2LRAt236ZR75-2vYf2iw&s',
+    title: 'HEOR & Market Access: The Hidden Career Path in Pharma Consulting',
+    description: `HEOR combines health economics, real-world evidence, and policy analysis to support pricing and access decisions. Trained graduates often secure analyst roles at Parexel, Trinity Life Sciences, and other consulting firms.`,
+    readTime: '9 min read',
+  },
+  {
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp8PdyxGrMBokM9RpwtV0CvZ3rLkgXlHEo_A&s',
+    title: 'From Classroom to Cipla: My Journey into Regulatory Affairs',
+    description: `Regulatory Affairs ensures medicines meet safety, efficacy, and quality standards. Focused training with mock submissions helps students confidently enter roles at Cipla, Sun Pharma, and other pharma companies.`,
+    readTime: '7 min read',
+  },
+  {
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjNO6KhyVq7sWMCGzuyiYU_5-W81Z3KWbzKg&s',
+    title: 'Pharma Forecasting Simplified: How Analysts Predict Sales of New Drugs',
+    description: `Forecasting in pharma combines patient-based modeling, market share assumptions, and historical analogues to guide strategic decisions. Training with real-world case studies prepares candidates for analyst roles at ZS Associates, IQVIA, and more.`,
     readTime: '8 min read',
   },
-  {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoc0W-qIt_Ft6SeWek_UdD8s3AOnUQh30lik_nTm8af6ZD6iTCckmzdyU&s',
-    title: 'Lab Technician Courses After 12th: Career Scope',
-    description:
-      'Lab Technicians are essential in diagnosing and treating diseases through precise laboratory analyses. Explore the diverse career opportunities in the diagnostic domain.',
-    readTime: '5 min read',
-  },
-  {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoc0W-qIt_Ft6SeWek_UdD8s3AOnUQh30lik_nTm8af6ZD6iTCckmzdyU&s',
-    title: 'Operation Theatre Technician: Career Scope',
-    description:
-      'From prepping operation theatres to supporting surgeons, OT Technicians are vital to every procedure. Discover the course, eligibility, and career path.',
-    readTime: '8 min read',
-  },
-  {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxFKv1tAOqKY4PBnobotsjPJTcjx9JFRvDaw&s',
-    title: 'Lab Technician Courses After 12th: Career Scope',
-    description:
-      'Lab Technicians are essential in diagnosing and treating diseases through precise laboratory analyses. Explore the diverse career opportunities in the diagnostic domain.',
-    readTime: '5 min read',
-  },
-  {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoc0W-qIt_Ft6SeWek_UdD8s3AOnUQh30lik_nTm8af6ZD6iTCckmzdyU&s',
-    title: 'Career in Paramedical Sciences after 12th',
-    description:
-      'Explore top paramedical courses after 12th, including MLT, OTT, and Radiology offering practical learning and strong career prospects.',
-    readTime: '11 min read',
-  },
-  {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoc0W-qIt_Ft6SeWek_UdD8s3AOnUQh30lik_nTm8af6ZD6iTCckmzdyU&s',
-    title: 'Lab Technician Courses After 12th: Career Scope',
-    description:
-      'Lab Technicians are essential in diagnosing and treating diseases through precise laboratory analyses. Explore the diverse career opportunities in the diagnostic domain.',
-    readTime: '5 min read',
-  },
-  {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoc0W-qIt_Ft6SeWek_UdD8s3AOnUQh30lik_nTm8af6ZD6iTCckmzdyU&s',
-    title: 'Career in Paramedical Sciences after 12th',
-    description:
-      'Explore top paramedical courses after 12th, including MLT, OTT, and Radiology offering practical learning and strong career prospects.',
-    readTime: '11 min read',
-  },
-  {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoc0W-qIt_Ft6SeWek_UdD8s3AOnUQh30lik_nTm8af6ZD6iTCckmzdyU&s',
-
-    title: 'In-Demand Paramedical Courses',
-    description:
-      'Explore diverse paramedical courses available after 12th. Discover course options and career prospects guiding students toward rewarding healthcare professions.',
-    readTime: '15 min read',
-  },
-
 ];
 
 const chunkArray = (arr, size) =>
   Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));
 
 const ProgramsCarousel = () => {
-  const chunks = chunkArray(programData, 3);
+
   const chunks2 = chunkArray(blogPosts, 3);
   const chunks3 = chunkArray(AIprogramData,3);
 
@@ -255,15 +227,15 @@ const ProgramsCarousel = () => {
     <Container fluid className='text-center '>
       <Row className='text-center py-5 '>
         <h2><strong>Pursue India's Most In-Demand</strong></h2>
-        <h1><strong>Artificial Intelligence Courses in Healtcare</strong></h1>
+        <h1><strong>Artificial Intelligence Courses in Healthcare</strong></h1>
 
         <Carousel activeIndex={index} onSelect={handleSelect}>
           {chunks3.map((group, index) => (
             <Carousel.Item key={index}>
               <Row className="justify-content-center m-4">
                 {group.map((program, idx) => (
-                  <Col key={idx} md={4} className="mb-3 p-2">
-                    <Card className="h-100 shadow p-2">
+                  <Col key={idx} md={4} className="mb-3 p-2 ">
+                    <Card className="h-100 shadow p-2 ">
                       {program.img && (
                         <Card.Img variant="top" src={program.img}
                           height='200px' />
@@ -334,39 +306,46 @@ const ProgramsCarousel = () => {
         </Col>
 
 
-      
-        <Carousel activeIndex={index} onSelect={handleSelect}>
-          {chunks.map((group, index) => (
-            <Carousel.Item key={index}>
-              <Row className="justify-content-center m-4">
-                {group.map((program, idx) => (
-                  <Col key={idx} md={4} className="mb-3 p-2">
-                    <Card className="h-100 shadow p-2">
-                      {program.img && (
-                        <Card.Img variant="top" src={program.img}
-                          height='200px' />
-                      )}
-                      <Card.Body>
-                        <Card.Title>{program.title}</Card.Title>
-                        <Card.Text className='text-start'>
-                          {program.description}<br />
+      <Row className="justify-content-center p-5">
+  {programData.map((program, idx) => (
+    <Col key={idx} md={4} className="mb-3 p-2">
+      <Card className="h-100 shadow p-2">
+        {program.img && (
+          <Card.Img
+            variant="top"
+            src={program.img}
+            height="200px"
+          />
+        )}
+        <Card.Body>
+          <Card.Title>{program.title}</Card.Title>
+          <Card.Text className="text-start">
+            {program.description}
+            <br />
+            <strong>📘 Degree:</strong> {program.degree}
+            <br />
+            <strong>⏳ Duration:</strong> {program.duration}
+            <br />
+            <strong>✅ Eligibility:</strong> {program.eligibility}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          {program.href && (
+            <Button
+              variant="secondary w-100"
+              as={Link}
+              to={program.href}
+            >
+              Explore
+            </Button>
+          )}
+          
+        </Card.Footer>
+      </Card>
+    </Col>
+  ))}
+</Row>
 
-                          <strong>📘Degree:</strong> {program.degree}<br />
-                          <strong>⏳Duration:</strong> {program.duration}<br />
-                          <strong>✅ Eligibility:</strong> {program.eligibility}
-                        </Card.Text>
-                        
-                      </Card.Body>
-                      <Card.Footer>{program.href && (
-                          <Button variant="secondary w-100" as={Link} to={program.href}>Explore</Button>
-                        )}</Card.Footer>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            </Carousel.Item>
-          ))}
-        </Carousel>
 
         <div>
           <Button variant='outline-secondary' className='bg-white text-dark m-3' as={Link} to="/AllPrograms" onClick={() => window.scrollTo(0, 0)}>Explore all program</Button>
@@ -375,16 +354,17 @@ const ProgramsCarousel = () => {
       </Row>
 
 
+
       <Container className='p-5 my-5'>
-        <h1 className="text-center mb-5">The MedLabs Edge</h1>
+        <h1 className="text-center mb-5 ">The MedLabs Edge</h1>
         <Row className='justify-content-center'>
           {edgePoints.map((point, idx) => (
             <Col md={6} lg={3} key={idx} className="mb-4">
-              <Card className="text-center h-100 border-0 bg-transparent">
+              <Card className="text-center h-100 border-3 bg-transparent">
                 <Card.Body>
 
-                  <Card.Title>{point.title}</Card.Title>
-                  <Card.Text>{point.description}</Card.Text>
+                  <Card.Title className='text-primary fst-italic'>{point.title}</Card.Title>
+                  <Card.Text className='fst-italic'>{point.description}</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
@@ -392,64 +372,68 @@ const ProgramsCarousel = () => {
         </Row>
       </Container>
 
-      <Container className=''>
-        <Row className='my-5 '>
+      <Container className="my-5">
+      <Row className="text-center mb-4">
+        <h3 className="pt-3">Student Success Stories</h3>
+        <h1>
+          <strong>From Classroom to Career</strong>
+        </h1>
+      </Row>
+<Row className="testimonial-row">
+  {successStories.map((story, idx) => (
+    <Col md={3} lg={3} key={idx} className="my-3">
+      <Card className="testimonial-card d-flex flex-column h-100">
+        <Card.Body className="d-flex flex-column">
+          <Card.Title className="testimonial-title text-center mb-3">
+            {story.title}
+          </Card.Title>
+          <Card.Text className="testimonial-quote flex-grow-1">
+            {story.quote}
+          </Card.Text>
+          <Card.Subtitle className="testimonial-name text-end mt-3">
+            — {story.name}
+          </Card.Subtitle>
+        </Card.Body>
+      </Card>
+    </Col>
+  ))}
+</Row>
 
 
-          <h3 className="text-center pt-5">Student Success Storie
-          </h3>
-          <h1><strong>From Classroom to Career</strong></h1>
 
-          {successStories.map((story, idx) => (
-            <Col md={4} key={idx} className="my-5 p-3">
-              <Card className="h-100 shadow-sm border-1">
-                <Card.Body>
-                  <video controls width="100%">
-                    <source src={story.video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
 
-                  <Card.Title className="text-center">{story.name}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted text-center">
-                    {story.role}
-                  </Card.Subtitle>
-                  <Card.Text className="mt-3">{story.quote}</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+    </Container>
 
-      <Row className='mt-5 p-5 ' style={{ backgroundColor: '#021a40ff', height: '700px' }}>
+      <Row className='mt-5 p-5 ' style={{ backgroundColor: '#021a40ff',  }}>
 
         <h1 className="text-center mb-4 text-white "><strong>News & Blogs</strong></h1>
-        <Carousel interval={null} indicators={false}>
-          {chunks2.map((group, slideIdx) => (
-            <Carousel.Item key={slideIdx}>
-              <Row>
-                {group.map((post, idx) => (
-                  <Col md={4} key={idx}>
-                    <Card className="h-100 shadow-sm border-1 mb-4">
-                      <Card.Img variant="top" src={post.image} alt={post.title} height='170px' />
-                      <Card.Body>
-                        <Card.Title>{post.title}</Card.Title>
-                        <Card.Text>{post.description}</Card.Text>
-                      </Card.Body>
-                      <Card.Footer className="text-muted text-end">
-                        {post.readTime}
-                      </Card.Footer>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            </Carousel.Item>
-          ))}
-              
-           
-        </Carousel>
+  
+<Carousel interval={null} indicators={true} nextIcon={<span className="carousel-arrow">&#10095;</span>} prevIcon={<span className="carousel-arrow">&#10094;</span>}>
+  {chunks2.map((group, slideIdx) => (
+    <Carousel.Item key={slideIdx}>
+      <Row>
+        {group.map((post, idx) => (
+          <Col md={4} key={idx}>
+            <Card className="h-100 shadow-sm border-1 mb-4">
+              <Card.Img variant="top" src={post.image} alt={post.title} height='170px' />
+              <Card.Body>
+                <Card.Title>{post.title}</Card.Title>
+                <Card.Text>{post.description}</Card.Text>
+              </Card.Body>
+              <Card.Footer className="text-muted text-end">
+                {post.readTime}
+              </Card.Footer>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Carousel.Item>
+  ))}
+</Carousel>
+
+
          <div>
-         <Button variant='outline-secondary' className='bg-white text-dark px-5' as={Link} to="/News&Blog" >View all</Button>
+         <Button variant='outline-secondary' className='bg-white text-dark px-5 mt-5' as={Link} to="/News&Blog" >View all</Button>
         </div>
       </Row>
    

@@ -1,4 +1,4 @@
-import React from 'react'
+ 
 import './TermsCondition.css'
 
 const TermsCondition = () => {
@@ -11,7 +11,7 @@ const TermsCondition = () => {
       <section>
         <h6><strong>Introduction</strong></h6>
         <p>
-          The website <a href="https://www.MedLabs.com/">https://www.MedLabs.com/</a> and its pages (hereinafter referred to as the “Website”) are operated by MedLabs Private Limited (“we,” “us,” or “MedLabs”).
+          The website and its pages (hereinafter referred to as the “Website”) are operated by MedLabs Private Limited (“we,” “us,” or “MedLabs”).
         </p>
         <p>
           MedLabs offers curated, industry-driven programs using proprietary technological solutions, as an approved training partner of the National Skill Development Corporation (“NSDC”), in collaboration with educational institutions.

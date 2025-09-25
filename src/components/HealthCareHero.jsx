@@ -8,7 +8,7 @@ const HealthcareHero = () => {
       <Row className=" p-5 bg-light">
         {/* Image Section */}
         <Col md={6} >
-          <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR22Yyr_uFYlE9wj0-8FoG3TRRl2Y9v-cx_w&s" alt="Healthcare professionals" fluid rounded width='100%' />
+          <Image src="group of student.png" alt="Healthcare professionals" fluid rounded width='100%' />
         </Col>
 
         {/* Content Section */}
@@ -20,8 +20,8 @@ const HealthcareHero = () => {
           <ul className="list-unstyled fs-5 mb-3">
             <Row>
               <Col md={6}>
-                <li><strong className="text-primary fs-2">10,000+</strong> <br></br>Students Trained</li><br />
-                <li><strong className="text-primary fs-2">2,000+</strong><br></br> Healthcare Employers</li>
+                <li><strong className="text-primary fs-2">2,500+</strong> <br></br>Students Trained</li><br />
+                <li><strong className="text-primary fs-2">2,00+</strong><br></br> Healthcare Employers</li>
               </Col>
               <Col md={6}>
                 <li><strong className="text-primary fs-2">98%</strong> <br></br>Placement Rate</li><br />
@@ -31,7 +31,7 @@ const HealthcareHero = () => {
             <br />
           </ul>
           <h5 className="lead">
-            Kickstart your career with a salary of up to <strong className="text-primary fs-5">₹50,000/month</strong> per month.
+            Kickstart your career with a salary of up to <strong className="text-primary fs-5">₹15,000/month</strong> per month.
           </h5>
         </Col>
       </Row>

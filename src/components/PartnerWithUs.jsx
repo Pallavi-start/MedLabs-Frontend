@@ -54,7 +54,7 @@ import axios from 'axios';
 
 function PartnerWithUs() {
     const handleOpenPDF = () => {
-    window.open('medlabs_brochure.pdf', '_blank'); // Opens PDF in a new tab
+    window.open('MedLabs_brochure.pdf', '_blank'); // Opens PDF in a new tab
   }
   const [formData, setFormData] = useState({
     name: '',
@@ -74,7 +74,7 @@ function PartnerWithUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://backend-medlabs.onrender.com/api/enquiry', formData)
+      await axios.post('https://backend-MedLabs.onrender.com/api/enquiry', formData)
        .then(res => console.log(res.data))
        .catch(err => console.error(err));
 

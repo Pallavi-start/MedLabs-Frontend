@@ -24,7 +24,7 @@ import CompetitiveIntelligence from "./components/ForecasstifyCompetitiveIntelli
 import HEORProgram from "./components/HEORProgram";
 import PharmaForecasting from "./components/PharmaForecastingTrainingProgram";
 import AIHealthcareTraining from "./components/AIInHealthcareTrainingProgram";
-
+import CommercialAnalyticsTraining from "./components/CommericialAnalytics";
 
 
 const App = () => {
@@ -40,8 +40,8 @@ return(
       <Route path="/PharmaBusinessAnalytics" element={<PharmaBusinessAnalytics/>}/>
       <Route path="/ForecassitifyCompetitiveIntelligenceProgram" element={<CompetitiveIntelligence/>}/>
       <Route path="/HEORProgram" element={<HEORProgram/>}/>
-    <Route path="/PharmaForecastingTrainingProgram" element={<PharmaForecasting />} />
-
+      <Route path="/PharmaForecastingTrainingProgram" element={<PharmaForecasting />} />
+      <Route path="/CommericialAnalytics"element={<CommercialAnalyticsTraining/>}/>
       <Route path="/MedicalLaboratoryTechnology" element={<MLTProgram/>}/>
       <Route path="/HospitalAdminitration"element={<HospitalAdministration/>}/>
       {/* <Route path="/OperationTheatreTechnology"element={<OTT/>}/> */}

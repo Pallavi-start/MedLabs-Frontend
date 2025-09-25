@@ -33,11 +33,11 @@ const Banner = () => {
         <Col md={6} className="  text-center"  >
 
           <Image
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg9U-VXQU8TXAkjXkQrkBdlwvspHnujjkeYg&s"
+            src="/student image.png"
             alt="Healthcare professionals"
             fluid
             rounded
-            className="w-100 h-100 object-fit-cover " />
+            className="BannerImage" />
 
 
         </Col>
@@ -51,7 +51,7 @@ const Banner = () => {
                   
                   <p className="fw-bold mt-3">Call us directly</p>
                   <Button variant="dark" className="mb-2" aria-label="Call MedLabs">
-                    <i className="bi bi-telephone-fill me-2"></i>+91 000000000
+                    <i className="bi bi-telephone-fill me-2"></i>+91 9021643748
                   </Button>
                   <p>(Available between 9 AM - 6 PM)</p>
                   <hr />
