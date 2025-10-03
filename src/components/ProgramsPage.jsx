@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Card, Button, Row, Col, Container, Modal, } from 'react-bootstrap';
+import { Carousel, Card, Button, Row, Col, Container, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useState, } from 'react';
 import './ProgramsPage.css'
@@ -166,7 +166,7 @@ const successStories = [
 
 {
   title: "Pharma Forecasting & Market Access",
-  name: "Sneha Mhaske - Axtria",
+  name: "Rhea R -  IQVIA",
   quote: "This course helped me transition from sales to analytics with real industry exercises. I was selected by ZS Associates as a Market Access Analyst within weeks."
 }
 ]
@@ -177,30 +177,35 @@ const blogPosts = [
     title: 'Breaking Into Pharma Analytics: Skills Required by Pharma GCC Industries',
     description: "Pharmaceutical companies are rapidly adopting data-driven analytics for drug launches, sales forecasting, and patient trend insights, creating high demand for professionals who can turn data into actionable business decisions.",
     readTime: '10 min read',
+    href: "/BreakingIntoPharmaAnalytics"
   },
   {
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIofcsqJ--3C19uz-0Ii6162-e_pc3S696oA&s',
     title: 'Pharmacovigilance Careers: How to Move from Fresher to Drug Safety Associate',
     description: `Pharmacovigilance ensures medicine safety by monitoring adverse drug reactions. Hands-on training helps freshers land Drug Safety Associate roles at companies like Accenture and Cognizant.`,
     readTime: '8 min read',
+    href:"/PharmacovigilanceBlog"
   },
   {
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRldH60R3mi9H8w6f2LRAt236ZR75-2vYf2iw&s',
     title: 'HEOR & Market Access: The Hidden Career Path in Pharma Consulting',
     description: `HEOR combines health economics, real-world evidence, and policy analysis to support pricing and access decisions. Trained graduates often secure analyst roles at Parexel, Trinity Life Sciences, and other consulting firms.`,
     readTime: '9 min read',
+    href:"/HEORBlog"
   },
   {
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp8PdyxGrMBokM9RpwtV0CvZ3rLkgXlHEo_A&s',
     title: 'From Classroom to Cipla: My Journey into Regulatory Affairs',
     description: `Regulatory Affairs ensures medicines meet safety, efficacy, and quality standards. Focused training with mock submissions helps students confidently enter roles at Cipla, Sun Pharma, and other pharma companies.`,
     readTime: '7 min read',
+    href:"/RegulatoryAffairsPage"
   },
   {
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjNO6KhyVq7sWMCGzuyiYU_5-W81Z3KWbzKg&s',
     title: 'Pharma Forecasting Simplified: How Analysts Predict Sales of New Drugs',
     description: `Forecasting in pharma combines patient-based modeling, market share assumptions, and historical analogues to guide strategic decisions. Training with real-world case studies prepares candidates for analyst roles at ZS Associates, IQVIA, and more.`,
     readTime: '8 min read',
+    href:"/PharmaForecastingPage"
   },
 ];
 
@@ -419,9 +424,14 @@ const ProgramsCarousel = () => {
               <Card.Body>
                 <Card.Title>{post.title}</Card.Title>
                 <Card.Text>{post.description}</Card.Text>
+            
+                
+             
               </Card.Body>
               <Card.Footer className="text-muted text-end">
-                {post.readTime}
+                 {post.href && (
+              <Button variant="secondary w-100" as={Link} to={post.href}>Explore</Button>
+                 )}
               </Card.Footer>
             </Card>
           </Col>
@@ -432,10 +442,10 @@ const ProgramsCarousel = () => {
 </Carousel>
 
 
-         <div>
-         <Button variant='outline-secondary' className='bg-white text-dark px-5 mt-5' as={Link} to="/News&Blog" >View all</Button>
-        </div>
-      </Row>
+<div>
+  <Button variant='outline-secondary' className='bg-white text-dark px-5 mt-5' as={Link} to="/News&Blog" >View all</Button>
+</div>
+</Row>
    
 
     </Container>

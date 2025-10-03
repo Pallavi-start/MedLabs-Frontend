@@ -25,13 +25,19 @@ import HEORProgram from "./components/HEORProgram";
 import PharmaForecasting from "./components/PharmaForecastingTrainingProgram";
 import AIHealthcareTraining from "./components/AIInHealthcareTrainingProgram";
 import CommercialAnalyticsTraining from "./components/CommericialAnalytics";
-
+import BreakingIntoPharmaAnalytics from "./components/BreakingIntoPharmaAnalytics";
+import PharmacovigilanceBlog from "./components/PharmacovigilanceBlog";
+import HEORBlog from "./components/HEORBlog";
+import RegulatoryAffairsPage from "./components/RegulatoryAffairsPage";
+import PharmaForecastingPage from "./components/PharmaForecastingPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   
  
 return(
   <BrowserRouter>
+   <ScrollToTop />
     <Header />
       <Routes>
       <Route path="/AllPrograms" element={<AllPrograms/>}/>
@@ -54,9 +60,15 @@ return(
       <Route path="/StudentPolicy"element={<StudentPolicy/>}/>
      <Route path="/RefundPolicy"element={<RefundPolicy/>}/>
       {/* <Route path="/PartnerWithUs"element={<PartnerWithUs/>}/> */}
+     <Route path="/BreakingIntoPharmaAnalytics" element={<BreakingIntoPharmaAnalytics/>}/>
+     <Route path="/PharmacovigilanceBlog" element={<PharmacovigilanceBlog/>}/>
+     <Route path="/HEORBlog" element={<HEORBlog/>}/>
+     <Route path="/RegulatoryAffairsPage" element={<RegulatoryAffairsPage/>}/>
+     <Route path="/PharmaForecastingPage" element={<PharmaForecastingPage/>}/>
+     <Route path="/" element={<Home/>}/>
      
-      <Route path="/" element={<Home/>}/>
-     </Routes>
+
+    </Routes>
      <Footer/>
     </BrowserRouter>
     

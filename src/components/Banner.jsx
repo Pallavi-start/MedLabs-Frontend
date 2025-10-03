@@ -33,7 +33,7 @@ const Banner = () => {
         <Col md={6} className="  text-center"  >
 
           <Image
-            src="/student image.png"
+            src="/image group student.png"
             alt="Healthcare professionals"
             fluid
             rounded

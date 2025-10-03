@@ -18,10 +18,11 @@ const Header = () => {
     className="d-inline-block align-top m-0 p-0"  // smaller gap
     alt="logo"
   />
-  <div className=''>
-    <span className="fw-bold text-primary fs-4 ">MedLabs</span><br />
-    <span className=" text2 text-danger fst-italic">Institute of Healthcare Eduction</span>
-  </div>
+ <div>
+  <span className="fw-bold text-primary fs-4 d-block">MedLabs</span>
+  <span className="text2 text-danger fst-italic d-block">Institute of Healthcare Education</span>
+</div>
+
 </Navbar.Brand>
 
 

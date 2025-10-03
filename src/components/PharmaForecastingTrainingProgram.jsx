@@ -17,7 +17,7 @@ const pharmaForecastingRoles = [
   'Business Insights Manager',
   'Healthcare Data Scientist',
   'Pharma Strategy & Operations Analyst'
-];
+]; 
 
 const PharmaForecasting = () => {
   const [showModal, setShowModal] = useState(false);
