@@ -27,7 +27,7 @@ const PrivacyPolicyParagraph = () => (
       Please read this Privacy Policy carefully as by providing your consent to it, you agree to the collection, storage,
       processing, disclosure, use and transfer of your personal information as set out in this Privacy Policy. Any information
       provided to us or collected by us is subject to this Privacy Policy. If you do not agree to any or all of these terms,
-      please write to us on <a href="mailto:info@MedLabs.org">info@MedLabs.org</a>. Should you continue to access and use the
+      please write to us on <a href="medlabs.edu@gmail.com">info@MedLabs.org</a>. Should you continue to access and use the
       App and provide your personal information, such act would constitute your consent to the terms contained herein.
     </p>
 

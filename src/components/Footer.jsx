@@ -77,7 +77,7 @@ const Footer = () => {
 
         <Col md={2}>
          <ul className="list-unstyled">
-  <li><a href="#privacy" className="text-dark text-decoration-none" rel="noreferrer">Instagram</a></li>
+  <li><a href="#privacy" className="text-dark text-decoration-none" rel="">Instagram</a></li>
   <li><a href="#privacy" className="text-dark text-decoration-none" rel="noreferrer">Facebook</a></li>
   <li><a href="#privacy" className="text-dark text-decoration-none" rel="noreferrer">LinkedIn</a></li>
   <li><a href="#privacy" className="text-dark text-decoration-none" rel="noreferrer">YouTube</a></li>
@@ -90,7 +90,7 @@ const Footer = () => {
          
           <p className="small mb-1"><strong>Corporate Office:</strong><br />City Avenue Commercial M Building, 313, near Sayali Hotel,Shankar Kalat Nagar,Wakad,Maharashtra 411051</p>
           <p className="small mb-1"><strong>Phone:</strong> +91 9021643748 </p>
-          <p className="small"><strong>Email:</strong> info@MedLabs.org</p>
+          <p className="small"><strong>Email:</strong> medlabs.edu@gmail.com</p>
         </Col>
 
         <Col>

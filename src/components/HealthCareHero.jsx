@@ -30,9 +30,7 @@ const HealthcareHero = () => {
             </Row>
             <br />
           </ul>
-          <h5 className="lead">
-            Kickstart your career with a salary of up to <strong className="text-primary fs-5">₹15,000/month</strong> per month.
-          </h5>
+         
         </Col>
       </Row>
 

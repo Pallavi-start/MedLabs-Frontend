@@ -30,6 +30,7 @@ import PharmacovigilanceBlog from "./components/PharmacovigilanceBlog";
 import HEORBlog from "./components/HEORBlog";
 import RegulatoryAffairsPage from "./components/RegulatoryAffairsPage";
 import PharmaForecastingPage from "./components/PharmaForecastingPage";
+import AgenticAIBlog from "./components/AgenticAIBlog";
 import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
@@ -65,6 +66,7 @@ return(
      <Route path="/HEORBlog" element={<HEORBlog/>}/>
      <Route path="/RegulatoryAffairsPage" element={<RegulatoryAffairsPage/>}/>
      <Route path="/PharmaForecastingPage" element={<PharmaForecastingPage/>}/>
+    <Route path="/AgenticAIBlog" element={<AgenticAIBlog/>}/>
      <Route path="/" element={<Home/>}/>
      
 

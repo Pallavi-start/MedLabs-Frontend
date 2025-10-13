@@ -207,6 +207,13 @@ const blogPosts = [
     readTime: '8 min read',
     href:"/PharmaForecastingPage"
   },
+   {
+    image: "blog6.png",
+    title:"Digital Transformation from Static Forecasting to AI-based Strategic Forecasting",
+    description:"Discover how Agentic AI is revolutionizing pharma forecasting — transforming static reports into real-time, intelligent systems that evolve with the market.",
+    readTime: "10 min read",
+    href: "/AgenticAIBlog",
+  }
 ];
 
 const chunkArray = (arr, size) =>
